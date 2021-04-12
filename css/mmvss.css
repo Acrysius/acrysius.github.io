@@ -42,6 +42,13 @@ picture {
   padding-left: 2%;
 }
 
+.horiVid2 {
+  float: left;
+  width: 21%;
+  height: 100;
+  padding-left: 2%;
+}
+
 .horiVidText {
   float:left;
   width: 40%;
