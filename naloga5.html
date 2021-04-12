@@ -7,18 +7,19 @@
     <link rel="stylesheet" href="css/mmvss.css">
     <title>MMVSS Naloga 5</title>
     <style >
-      x3d {border:2pc solid darkorange;}
+      x3d {border:2px solid darkorange;}
     </style>
   </head>
   <body>
     <a href="index.html">Domov</a>
     <h2>Domača naloga 5</h2>
     <h3>Prikaz 3D objektov na spletu</h3>
-    <x3d width="600px" height="400px" showStat="true">
+    <x3d width="1000px" height="500px" showStat="true">
       <scene>
-        <inline url="photos/untitled.x3d" mapDEFToID="true" render="true"></inline>
+        <inline url="photos/vaja_crystals.x3d" render="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" load="true" namespacename=""></inline>
       </scene>
     </x3d>
-
+    <p style="font-size: 25px;">Prikaz datoteke .X3D formata v brskalniku z uporabo X3DOM knjižnice. Ogled ne potrebuje vtičnikov in drugih stvari, vse je poskrbljeno z JavaScript knjižnico.</p>
+    <p><b>POZOR!</b> Brskalnik zaradi varnostnih razlogov ne dovoljuje nalaganje lokalnih datotek. Za ustrezno konfiguracijo beri <a href="https://dev.to/dengel29/loading-local-files-in-firefox-and-chrome-m9f">sledečo povezavo</a>.</p>
   </body>
 </html>
