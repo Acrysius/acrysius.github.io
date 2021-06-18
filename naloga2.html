@@ -3,7 +3,15 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/mmvss.css">
-    <title>MMVSS Naloga 2</title>
+    <title>MVZSS - Naloga 2</title>
+    <link rel="stylesheet" href="css/mmvss.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
 
     <script type="text/javascript" src="lib/big.min.js"></script>
     <script type="text/javascript" src="lib/gl-matrix-min.js"></script>
@@ -18,157 +26,270 @@
     /* The class of components handled by the viewer */
     .viewerComponent  {
     }
+
+    @font-face {
+        font-family: Redrock;
+        src: url(fonts/redrock-svg-font/Redrock-BWYxB.ttf);
+      }
+
+      @font-face {
+        font-family: LoveSummer;
+        src: url(fonts/love-summer-font/Lovesummer-jEjRM.otf);
+      }
+
+      .fontEna {
+        font-family: Redrock;
+        font-size: 24px;
+      }
+
+      .fontThree {
+        font-family: LoveSummer;
+        font-size: 40px;
+      }
+
+      .fontDva {
+        font-family: 'Merriweather', serif;
+        font-size: 40px;
+      }
     </style>
   </head>
   <body>
-    <div class="none">
-      <a href="index.html"></a>
-      <h2>Domača naloga 2B</h2>
-      <h3>Multimedijski elementi // Poljubno izbrani fonti</h3>
-      <div class="none">
-        <p>Placeholder text for the image</p>
+    <header>
+      <img src="photos/mvzss_banner.webp" alt="Prikazna grafika za naslovnico spletnega omrežja.">
+    </header>
+    <nav>
+      <div class="navbarPlace">
+        <button class="navButton" onclick="document.location='index.html'">Domov</button>
       </div>
-      <h3>Multimedijski elementi // Fotografija</h3>
-      <div class="imgWithText">
-        <img src="photos/butterfly_no_hdr.jpg" alt="Fotografija metulja, posneta z napravo Huawei Nova 5T brez opcije HDR.">
-        <p>Fotografija 4000×3000 .jpg formata brez HDR, velikost 2,64MB.</p>
+      <div class="dropdown">
+        <button class="dropbtn">Naloge</button>
+          <div class="dropdownContent">
+            <a href="naloga1.html">Naloga 1</a>
+            <a href="naloga2.html">Naloga 2</a>
+            <a href="naloga3.html">Naloga 3</a>
+            <a href="naloga4.html">Naloga 4</a>
+            <a href="naloga5.html">Naloga 5</a>
+            <a href="naloga6.html">Naloga 6</a>
+            <a href="naloga7.html">Naloga 7</a>
+          </div>
       </div>
-      <div class="imgWithText">
-        <img src="photos/butterfly_hdr.jpg" alt="Fotografija metulja, posneta z napravo Huawei Nova 5T z opcijo HDR.">
-        <p>Fotografija 4000×3000 .jpg formata s HDR, velikost 3,12MB.</p>
-      </div>
-      <h3>Multimedijski elementi // GRafike v različnih formatih</h3>
-      <div class="imgWithText">
-        <img src="photos/campfire.jpg" alt="Grafika popotnika v močvari, ki na tabornem ognju peče ribo. Predstavljena slika je v .JPG formatu">
-        <p>Grafika formata .JPG, velikost datoteke 496KB.</p>
-      </div>
-      <div class="imgWithText">
-        <picture>
-          <img src="photos/campfire.webp" alt="Grafika popotnika v močvari, ki na tabornem ognju peče ribo. Predstavljena slika je v .WEBP formatu">
-          <p>Grafika formata .WEBP, velikost datoteke 227KB.</p>
-        </picture>
-      </div>
-      <div class="imgWithText">
-        <img src="photos/campfire.png" alt="Grafika popotnika v močvari, ki na tabornem ognju peče ribo. Predstavljena slika je v .PNG formatu">
-        <p>Grafika formata .PNG, velikost datoteke 1,32MB.</p>
-      </div>
-    </div>
-    <div class="assignment">
-      <h2>Domača naloga 2C</h2>
-      <h3>Napredni multimedijski element // Zvok</h3>
-      <audio controls>
-        <source src="sounds/debevc.ogg" type="audio/ogg">
-          Vaš brskalnik ne podpira .OGG formata predvajanja.
-      </audio>
-      <p>Zvočna datoteka dolžine 2 sekundi, velikosti 42Kb in formata .OGG Vorbis</p>
-      <audio controls>
-        <source src="sounds/debevc.mp3" type="audio/mp3">
-          Vaš brskalnik ne podpira .MP3 formata predvajanja.
-      </audio>
-      <p>Zvočna datoteka dolžine 2 sekundi, velikosti 49Kb in formata .MP3</p>
-      <audio controls>
-        <source src="sounds/debevc.flac" type="audio/flac">
-          Vaš brskalnik ne podpira .FLAC formata predvajanja.
-      </audio>
-      <p>Zvočna datoteka dolžine 2 sekundi, velikosti 201Kb in formata .FLAC</p>
-      <audio controls>
-        <source src="sounds/debevc.wav" type="audio/wav">
-          Vaš brskalnik ne podpira .WAV formata predvajanja.
-      </audio>
-      <p>Zvočna datoteka dolžine 2 sekundi, velikosti 429Kb in formata .WAV</p>
-      <h3>Napredni multimedijski element // Animacija</h3>
-      <div class="gifWithText">
-        <img src="photos/doncin.gif" alt="Zelo kratka animacija plesoče figure.">
-        <p>Krajša animacija .GIF formata. Velikost 105KB</p>
-      </div>
-
-      <h3>Napredni multimedijski element // Videoposnetek iz Youtube-a</h3>
-      <div class="imgWithText">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/tq_KOmXyVDo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-    <h3>Napredni multimedijski element // SweetHome3D Interaktivni produkt</h3>
-    <div class="">
-      <!-- To je SweetHome3D segment, našopana koda-->
-      <div>
-        <!-- Copy the following canvas and components in your page, changing their size / texts and other values if needed  -->
-        <canvas id="viewerCanvas" class="viewerComponent" width="800" height="600"
-                style="background-color: #CCCCCC; border: 1px solid gray; outline:none" tabIndex="1"></canvas>
-        <div id="viewerProgressDiv" style="width: 400px; position: relative; top: -350px; left: 200px; background-color: rgba(128, 128, 128, 0.7); padding: 20px; border-radius: 25px">
-          <progress id="viewerProgress"  class="viewerComponent" value="0" max="200" style="width: 400px"></progress>
-          <label id="viewerProgressLabel" class="viewerComponent" style="margin-top: 2px; display: block; margin-left: 10px"></label>
-        </div>
-        <div style="margin-top: -60px">
-          <input  id="aerialView"   class="viewerComponent" name="cameraType" type="radio" style="visibility: hidden;"/>
-            <label class="viewerComponent" for="aerialView" style="visibility: hidden;">Aerial view</label>
-          <input  id="virtualVisit" class="viewerComponent" name="cameraType" type="radio" style="visibility: hidden;"/>
-            <label class="viewerComponent" for="virtualVisit" style="visibility: hidden;">Virtual visit</label>
-          <select id="levelsAndCameras" class="viewerComponent" style="visibility: hidden;"></select>
+    </nav>
+    <div class="container">
+      <div class="subcontainer">
+        <h1>Naloga 2</h1>
+        <h2>Multimedijski elementi - Poljubno izbrani fonti</h2>
+        <div class="presentation">
+          <div class="threeImageContainer">
+            <p class="fontEna">Tomi Perša</p>
+            <p class="fontEna">Klemen Sajko</p>
+            <p class="fontEna">Janja Zadravec</p>
+            <p>Font družine Redrock v .tff formatu</p>
+          </div>
+          <div class="threeImageContainer">
+            <p class="fontDva">Tomi Perša</p>
+            <p class="fontDva">Klemen Sajko</p>
+            <p class="fontDva">Janja Zadravec</p>
+            <p>font družine Merriweather, pridobljene iz Google Fonts.</p>
+          </div>
+          <div class="threeImageContainer">
+            <p class="fontThree">Tomi Perša</p>
+            <p class="fontThree">Klemen Sajko</p>
+            <p class="fontThree">Janja Zadravec</p>
+            <p>Font družine LoveSummer .otf formata.</p>
+          </div>
         </div>
       </div>
-
-      <script type="text/javascript">
-        var homeUrl = "some_progress.zip";
-        var onerror = function(err) {
-            if (err == "No WebGL") {
-              alert("Sorry, your browser doesn't support WebGL.");
-            } else {
-              console.log(err.stack);
-              alert("Error: " + (err.message  ? err.constructor.name + " " +  err.message  : err));
-            }
-          };
-        var onprogression = function(part, info, percentage) {
-            var progress = document.getElementById("viewerProgress");
-            if (part === HomeRecorder.READING_HOME) {
-              // Home loading is finished
-              progress.value = percentage * 100;
-              info = info.substring(info.lastIndexOf('/') + 1);
-            } else if (part === Node3D.READING_MODEL) {
-              // Models loading is finished
-              progress.value = 100 + percentage * 100;
-              if (percentage === 1) {
-                document.getElementById("viewerProgressDiv").style.visibility = "hidden";
-              }
-            }
-
-            document.getElementById("viewerProgressLabel").innerHTML =
-                (percentage ? Math.floor(percentage * 100) + "% " : "") + part + " " + info;
-          };
-
-        // Display home in canvas 3D
-        // Mouse and keyboard navigation explained at
-        // http://sweethome3d.cvs.sf.net/viewvc/sweethome3d/SweetHome3D/src/com/eteks/sweethome3d/viewcontroller/resources/help/en/editing3DView.html
-        // You may also switch between aerial view and virtual visit with the space bar
-        // For browser compatibility, see http://caniuse.com/webgl
-        viewHome("viewerCanvas",    // Id of the canvas
-                 homeUrl,           // URL or relative URL of the home to display
-                 onerror,           // Callback called in case of error
-                 onprogression,     // Callback called while loading
-                {roundsPerMinute: 0,                    // Rotation speed of the animation launched once home is loaded in rounds per minute, no animation if missing or equal to 0
-                 navigationPanel: "none",               // Displayed navigation arrows, "none" or "default" for default one or an HTML string containing elements with data-simulated-key
-                                                        // attribute set "UP", "DOWN", "LEFT", "RIGHT"... to replace the default navigation panel, "none" if missing
-                 aerialViewButtonId: "aerialView",      // Id of the aerial view radio button, radio buttons hidden if missing
-                 virtualVisitButtonId: "virtualVisit",  // Id of the aerial view radio button, radio buttons hidden if missing
-                 levelsAndCamerasListId: "levelsAndCameras"   // Id of the levels select component, hidden if missing
-             /*, selectableLevels: ["Level 0", "Level 1"] */  // List of displayed levels, all viewable levels if missing
-                });
-      </script>
-      <button onclick='viewHomeInOverlay("some_progress.zip",
-                  {roundsPerMinute:    1,                        /* Rotation speed of the animation launched once home is loaded in rounds per minute, no animation if missing */
-                   widthByHeightRatio: 4/3,                      /* Size ratio of the displayed canvas */
-                   navigationPanel: "none",                      /* Displayed navigation arrows, "none" or "default" for default one or an HTML string containing elements with data-simulated-key
-                                                                    attribute set "UP", "DOWN", "LEFT", "RIGHT"... to replace the default navigation panel, "none" if missing */
-                   aerialViewButtonText: "Aerial view",          /* Text displayed for aerial view radio button, no radio buttons if missing */
-                   virtualVisitButtonText: "Virtual visit",      /* Text displayed for virtual visit radio button, no radio buttons if missing */
-                /* selectableLevels: ["Level 0", "Level 1"], */  /* Uncomment to choose the list of displayed levels, no select component if empty array */
-                   viewerControlsAdditionalHTML: "",             /* Additional HTML text appended to controls displayed below the canvas 3D, by default empty */
-                   readingHomeText: "Reading",                   /* Comment displayed while reading home */
-                   readingModelText: "Model",                    /* Comment displayed while reading models */
-                   noWebGLSupportError: "No WebGL support"       /* Error message displayed if the browser do not support WebGL */
-                  })'>View home</button>
-                  <div>
-                    <a href="http://www.sweethome3d.com">Sweet Home 3D</a> HTML5 Viewer / Version 1.2 - Distributed under GNU General Public License
-                  </div>
     </div>
+    <br><hr><br>
+    <div class="container">
+      <div class="subcontainer">
+        <h2>Multimedijski elementi // Fotografija</h2>
+        <div class="presentation">
+          <div class="twoImageContainer">
+            <img src="photos/butterfly_no_hdr.jpg" alt="Fotografija metulja, posneta z napravo Huawei Nova 5T brez opcije HDR.">
+            <p>Fotografija 4000×3000 .jpg formata brez HDR, velikost 2,64MB.</p>
+          </div>
+          <div class="twoImageContainer">
+            <img src="photos/butterfly_hdr.jpg" alt="Fotografija metulja, posneta z napravo Huawei Nova 5T z opcijo HDR.">
+            <p>Fotografija 4000×3000 .jpg formata s HDR, velikost 3,12MB.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><hr><br>
+    <div class="container">
+      <div class="subcontainer">
+        <h2>Multimedijski elementi // Grafike v različnih formatih</h2>
+        <div class="presentation">
+          <div class="threeImageContainer">
+            <img src="photos/campfire.jpg" alt="Grafika popotnika v močvari, ki na tabornem ognju peče ribo. Predstavljena slika je v .JPG formatu">
+            <p>Grafika formata .JPG, velikost datoteke 496KB.</p>
+          </div>
+          <div class="threeImageContainer">
+            <img src="photos/campfire.webp" alt="Grafika popotnika v močvari, ki na tabornem ognju peče ribo. Predstavljena slika je v .WEBP formatu">
+            <p>Grafika formata .WEBP, velikost datoteke 227KB.</p>
+          </div>
+          <div class="threeImageContainer">
+            <img src="photos/campfire.png" alt="Grafika popotnika v močvari, ki na tabornem ognju peče ribo. Predstavljena slika je v .PNG formatu">
+            <p>Grafika formata .PNG, velikost datoteke 1,32MB.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><hr><br>
+    <div class="container">
+      <div class="subcontainer">
+        <h2>Multimedijski elementi // Zvok</h2>
+        <div class="presentation">
+          <div class="twoImageContainer">
+            <audio controls>
+              <source src="sounds/debevc.ogg" type="audio/ogg">
+                Vaš brskalnik ne podpira .OGG formata predvajanja.
+            </audio>
+            <p>Zvočna datoteka dolžine 2 sekundi, velikosti 42Kb in formata .OGG Vorbis</p>
+          </div>
+          <div class="twoImageContainer">
+            <audio controls>
+              <source src="sounds/debevc.mp3" type="audio/mp3">
+                Vaš brskalnik ne podpira .MP3 formata predvajanja.
+            </audio>
+            <p>Zvočna datoteka dolžine 2 sekundi, velikosti 49Kb in formata .MP3</p>
+          </div>
+
+            <div class="twoImageContainer">
+              <audio controls>
+                <source src="sounds/debevc.flac" type="audio/flac">
+                  Vaš brskalnik ne podpira .FLAC formata predvajanja.
+              </audio>
+              <p>Zvočna datoteka dolžine 2 sekundi, velikosti 201Kb in formata .FLAC</p>
+            </div>
+            <div class="twoImageContainer">
+              <audio controls>
+                <source src="sounds/debevc.wav" type="audio/wav">
+                  Vaš brskalnik ne podpira .WAV formata predvajanja.
+              </audio>
+              <p>Zvočna datoteka dolžine 2 sekundi, velikosti 429Kb in formata .WAV</p>
+            </div>
+
+
+        </div>
+        </div>
+      </div>
+      <br><hr><br>
+      <div class="container">
+        <div class="subcontainer">
+          <h2>Multimedijski elementi // Animacija</h2>
+          <div class="specialContainer">
+            <img class="resize" src="photos/doncin.gif" alt="Zelo kratka animacija plesoče figure.">
+            <p>Krajša animacija .GIF formata. Velikost 105KB</p>
+          </div>
+        </div>
+      </div>
+      <br><hr><br>
+      <div class="container">
+        <div class="subcontainer">
+          <h2>Multimedijski elementi //Vgrajen videoposnetek</h2>
+          <div class="ImageContainer">
+            <iframe src="https://www.youtube.com/embed/tq_KOmXyVDo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Videoposnetek ustvarjalca, ki ljudem prikazuje svoj unikaten način animacije.</p>
+          </div>
+        </div>
+      </div>
+      <br><hr><br>
+      <div class="container">
+        <div class="subcontainer">
+          <h2>Multimedijski elementi //Vgrajen Sweet Home 3D</h2>
+
+        <div class="ImageContainer">
+          <!-- To je SweetHome3D segment, našopana koda-->
+          <div>
+            <!-- Copy the following canvas and components in your page, changing their size / texts and other values if needed  -->
+            <canvas id="viewerCanvas" class="viewerComponent" width="800" height="600"
+                    style="background-color: #CCCCCC; border: 1px solid gray; outline:none" tabIndex="1"></canvas>
+            <div id="viewerProgressDiv" style="width: 400px; position: relative; top: -350px; left: 200px; background-color: rgba(128, 128, 128, 0.7); padding: 20px; border-radius: 25px">
+              <progress id="viewerProgress"  class="viewerComponent" value="0" max="200" style="width: 400px"></progress>
+              <label id="viewerProgressLabel" class="viewerComponent" style="margin-top: 2px; display: block; margin-left: 10px"></label>
+            </div>
+            <div style="margin-top: -60px">
+              <input  id="aerialView"   class="viewerComponent" name="cameraType" type="radio" style="visibility: hidden;"/>
+                <label class="viewerComponent" for="aerialView" style="visibility: hidden;">Aerial view</label>
+              <input  id="virtualVisit" class="viewerComponent" name="cameraType" type="radio" style="visibility: hidden;"/>
+                <label class="viewerComponent" for="virtualVisit" style="visibility: hidden;">Virtual visit</label>
+              <select id="levelsAndCameras" class="viewerComponent" style="visibility: hidden;"></select>
+            </div>
+          </div>
+
+          <script type="text/javascript">
+            var homeUrl = "some_progress.zip";
+            var onerror = function(err) {
+                if (err == "No WebGL") {
+                  alert("Sorry, your browser doesn't support WebGL.");
+                } else {
+                  console.log(err.stack);
+                  alert("Error: " + (err.message  ? err.constructor.name + " " +  err.message  : err));
+                }
+              };
+            var onprogression = function(part, info, percentage) {
+                var progress = document.getElementById("viewerProgress");
+                if (part === HomeRecorder.READING_HOME) {
+                  // Home loading is finished
+                  progress.value = percentage * 100;
+                  info = info.substring(info.lastIndexOf('/') + 1);
+                } else if (part === Node3D.READING_MODEL) {
+                  // Models loading is finished
+                  progress.value = 100 + percentage * 100;
+                  if (percentage === 1) {
+                    document.getElementById("viewerProgressDiv").style.visibility = "hidden";
+                  }
+                }
+
+                document.getElementById("viewerProgressLabel").innerHTML =
+                    (percentage ? Math.floor(percentage * 100) + "% " : "") + part + " " + info;
+              };
+
+            // Display home in canvas 3D
+            // Mouse and keyboard navigation explained at
+            // http://sweethome3d.cvs.sf.net/viewvc/sweethome3d/SweetHome3D/src/com/eteks/sweethome3d/viewcontroller/resources/help/en/editing3DView.html
+            // You may also switch between aerial view and virtual visit with the space bar
+            // For browser compatibility, see http://caniuse.com/webgl
+            viewHome("viewerCanvas",    // Id of the canvas
+                     homeUrl,           // URL or relative URL of the home to display
+                     onerror,           // Callback called in case of error
+                     onprogression,     // Callback called while loading
+                    {roundsPerMinute: 0,                    // Rotation speed of the animation launched once home is loaded in rounds per minute, no animation if missing or equal to 0
+                     navigationPanel: "none",               // Displayed navigation arrows, "none" or "default" for default one or an HTML string containing elements with data-simulated-key
+                                                            // attribute set "UP", "DOWN", "LEFT", "RIGHT"... to replace the default navigation panel, "none" if missing
+                     aerialViewButtonId: "aerialView",      // Id of the aerial view radio button, radio buttons hidden if missing
+                     virtualVisitButtonId: "virtualVisit",  // Id of the aerial view radio button, radio buttons hidden if missing
+                     levelsAndCamerasListId: "levelsAndCameras"   // Id of the levels select component, hidden if missing
+                 /*, selectableLevels: ["Level 0", "Level 1"] */  // List of displayed levels, all viewable levels if missing
+                    });
+          </script>
+          <button onclick='viewHomeInOverlay("some_progress.zip",
+                      {roundsPerMinute:    1,                        /* Rotation speed of the animation launched once home is loaded in rounds per minute, no animation if missing */
+                       widthByHeightRatio: 4/3,                      /* Size ratio of the displayed canvas */
+                       navigationPanel: "none",                      /* Displayed navigation arrows, "none" or "default" for default one or an HTML string containing elements with data-simulated-key
+                                                                        attribute set "UP", "DOWN", "LEFT", "RIGHT"... to replace the default navigation panel, "none" if missing */
+                       aerialViewButtonText: "Aerial view",          /* Text displayed for aerial view radio button, no radio buttons if missing */
+                       virtualVisitButtonText: "Virtual visit",      /* Text displayed for virtual visit radio button, no radio buttons if missing */
+                    /* selectableLevels: ["Level 0", "Level 1"], */  /* Uncomment to choose the list of displayed levels, no select component if empty array */
+                       viewerControlsAdditionalHTML: "",             /* Additional HTML text appended to controls displayed below the canvas 3D, by default empty */
+                       readingHomeText: "Reading",                   /* Comment displayed while reading home */
+                       readingModelText: "Model",                    /* Comment displayed while reading models */
+                       noWebGLSupportError: "No WebGL support"       /* Error message displayed if the browser do not support WebGL */
+                      })'>View home</button>
+                      <div>
+                        <a href="http://www.sweethome3d.com">Sweet Home 3D</a> HTML5 Viewer / Version 1.2 - Distributed under GNU General Public License
+                      </div>
+
+        </div>
+      </div>
+    </div>
+      <br><hr><br>
+    <footer>
+      <p>Medijske komunikacije<br>
+      Multimedijske Vsebine za Svetovni Splet<br>
+      ©2020/21</p>
+    </footer>
   </body>
 </html>

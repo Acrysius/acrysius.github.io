@@ -1,33 +1,69 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/mmvss.css">
-    <title>MMVSS Naloga 4</title>
-
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>MVZSS - Naloga 4</title>
+  <link rel="stylesheet" href="css/mmvss.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
   <body>
-    <a href="index.html">Domov</a>
-    <h2>Domača naloga 4</h2>
-    <h3>Obogatena resničnost</h3>
-    <div class="horiVid">
-      <video width="100%" height="auto" controls>
-        <source src="photos/spark_ar_studio.mp4" type="video/mp4">
-      </video>
+    <header>
+      <img src="photos/mvzss_banner.webp" alt="Prikazna grafika za naslovnico spletnega omrežja.">
+    </header>
+    <nav>
+      <div class="navbarPlace">
+        <button class="navButton" onclick="document.location='index.html'">Domov</button>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Naloge</button>
+          <div class="dropdownContent">
+            <a href="naloga1.html">Naloga 1</a>
+            <a href="naloga2.html">Naloga 2</a>
+            <a href="naloga3.html">Naloga 3</a>
+            <a href="naloga4.html">Naloga 4</a>
+            <a href="naloga5.html">Naloga 5</a>
+            <a href="naloga6.html">Naloga 6</a>
+            <a href="naloga7.html">Naloga 7</a>
+          </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="subcontainer">
+        <h1>Domača naloga 4</h1>
+        <h2>Obogatena resničnost</h2>
+        <div class="presentation">
+          <div class="twoImageContainer">
+            <video width="100%" height="auto" controls>
+              <source src="photos/spark_ar_studio.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="twoImageContainer">
+            <video width="100%" height="auto" controls>
+              <source src="photos/spark_studio_2.webm" type="video/webm">
+            </video>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="horiVid2">
-      <video width="100%" height="auto" controls>
-        <source src="photos/spark_studio_2.webm" type="video/webm">
-      </video>
+    <br><hr><br>
+    <div class="container">
+      <div class="subcontainer">
+        <h2>Posnetek 3D objekta kot primer obogatene resničnosti</h2>
+        <p>Z uporabo programa Spark AR Studio smo izdelani 3D objekt vstavili v orodje in ga po navodilih, pridobljenih na predavanjih, ustrezno nastavili
+        v okolje. Prek programa smo nato izdelan 3D filter prenesli na aplikacijo Instagram in ga tudi ustreuno preizkusili. Na videoposnetku levo je prikazan
+        naš izdelek, umeščen v realno okolje.</p><br><br>
+        <p>Prikazan je tudi lastno izdelan 3D model, ki smo ga nato postavili v okolje z uporabo World Objekta. Model je bil izdelan v Blenderju in eksportiran
+        v .obj datoteko, ki smo jo nato umestili v prednastavljen scenarij in preizkusili v resničnem okolju.</p>
+      </div>
     </div>
-    <div class="horiVidText">
-      <h2>Posnetek 3D objekta kot primer obogatene resničnosti</h2>
-      <p style="font-size:25px;">Z uporabo programa Spark AR Studio smo izdelani 3D objekt vstavili v orodje in ga po navodilih, pridobljenih na predavanjih, ustrezno nastavili
-      v okolje. Prek programa smo nato izdelan 3D filter prenesli na aplikacijo Instagram in ga tudi ustreuno preizkusili. Na videoposnetku levo je prikazan
-      naš izdelek, umeščen v realno okolje.</p><br><br>
-      <p style="font-size:25px;">Prikazan je tudi lastno izdelan 3D model, ki smo ga nato postavili v okolje z uporabo World Objekta. Model je bil izdelan v Blenderju in eksportiran
-      v .obj datoteko, ki smo jo nato umestili v prednastavljen scenarij in preizkusili v resničnem okolju.</p>
-    </div>
-
+    <br><hr><br>
+    <footer>
+      <p>Medijske komunikacije<br>
+      Multimedijske Vsebine za Svetovni Splet<br>
+      ©2020/21</p>
+    </footer>
   </body>
 </html>

@@ -3,40 +3,100 @@
   <head>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="utf-8">
-    <script type='text/javascript' src='http://www.x3dom.org/download/x3dom.js'> </script>
-    <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'></link>
     <link rel="stylesheet" href="css/mmvss.css">
-    <title>MMVSS Naloga 7</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 
-    <style >
-      x3d {border:2px solid darkorange;}
-    </style>
+    <title>MVZSS - Naloga 7</title>
   </head>
   <body>
-    <a href="index.html">Domov</a>
-    <h2>Domača naloga 7</h2>
-    <h3>Fotogrametrija</h3>
-    <div style="width:100%;"> <iframe width="50%" height="500px" title="Link Figurine" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/dbc2ad2606974de683f2cdc4603fcd04/embed">
-    </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/link-figurine-dbc2ad2606974de683f2cdc4603fcd04?utm_medium=embed&utm_campaign=share-popup&utm_content=dbc2ad2606974de683f2cdc4603fcd04" target="_blank" style="font-weight: bold; color: #1CAAD9;"> Link Figurine </a> by
-      <a href="https://sketchfab.com/acrysius?utm_medium=embed&utm_campaign=share-popup&utm_content=dbc2ad2606974de683f2cdc4603fcd04" target="_blank" style="font-weight: bold; color: #1CAAD9;"> acrysius </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=dbc2ad2606974de683f2cdc4603fcd04" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+    <header>
+      <img src="photos/mvzss_banner.webp" alt="Prikazna grafika za naslovnico spletnega omrežja.">
+    </header>
+    <nav>
+      <div class="navbarPlace">
+        <button class="navButton" onclick="document.location='index.html'">Domov</button>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Naloge</button>
+          <div class="dropdownContent">
+            <a href="naloga1.html">Naloga 1</a>
+            <a href="naloga2.html">Naloga 2</a>
+            <a href="naloga3.html">Naloga 3</a>
+            <a href="naloga4.html">Naloga 4</a>
+            <a href="naloga5.html">Naloga 5</a>
+            <a href="naloga6.html">Naloga 6</a>
+            <a href="naloga7.html">Naloga 7</a>
+          </div>
+      </div>
+    </nav>
 
-    <p style="font-size: 25px;">Prikaz 3D objekta, ustvarjenega s pomočjo Agisoft Metashape</p>
+    <div class="container">
+      <div class="subcontainer">
+        <h1>Naloga 7</h1>
+        <h2>Fotogrametrija</h2>
+        <div class="presentation">
+          <div class="twoImageContainer">
+            <img src="photos/link_irl1.webp" alt="Fotografija Amiibo figurice lika Link iz serije videoiger Legenda o Zeldi. Usmerjenost od spredaj.">
+            <p>Fotografija Amiibo figurice Linka iz serije Legenda o Zeldi. Prikazana fotografija je zajeta bolj od spredaj.</p>
+          </div>
+          <div class="twoImageContainer">
+            <img src="photos/link_irl2.webp" alt="Fotografija Amiibo figurice lika Link iz serije videoiger Legenda o Zeldi. Usmerjenost od zadaj.">
+            <p>Še en pogled na figurico od zadaj.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><hr><br>
+    <div class="container">
+      <div class="subcontainer">
+        <h2>Zajemi zaslona iz postopka izdelave</h2>
+        <div class="presentation">
+          <div class="twoImageContainer">
+            <img src="photos/naloga7_2.png" alt="Render 3D izdelka z vsemi lučmi in pravilnimi materiali/teksturami">
+            <p>Postopek izdelave s programom Agisoft MetaShape.</p>
+          </div>
+          <div class="twoImageContainer">
+            <img src="photos/naloga7_4.png" alt="Render 3D izdelka z vsemi lučmi in pravilnimi materiali/teksturami">
+            <p>Končni izdelek</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="subcontainer">
+        <div class="presentation">
+          <div class="twoImageContainer">
+            <img src="photos/naloga7_3.png" alt="Render 3D izdelka z vsemi lučmi in pravilnimi materiali/teksturami">
+            <p>Izdelovanje texture</p>
+          </div>
+          <div class="twoImageContainer">
+            <img src="photos/naloga7_1.png" alt="Render 3D izdelka z vsemi lučmi in pravilnimi materiali/teksturami">
+            <p>Prvotni render objekta</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><hr><br>
+    <div class="container">
+      <div class="subcontainer">
+        <h2>3D ogled objekta, ustvarjenega s pomočjo fotogrametrije</h2>
+        <div class="ImageContainer">
+          <div style="width:100%;"> <iframe width="50%" height="500px" title="Link Figurine" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/dbc2ad2606974de683f2cdc4603fcd04/embed">
+          </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/link-figurine-dbc2ad2606974de683f2cdc4603fcd04?utm_medium=embed&utm_campaign=share-popup&utm_content=dbc2ad2606974de683f2cdc4603fcd04" target="_blank" style="font-weight: bold; color: #1CAAD9;"> Link Figurine </a> by
+            <a href="https://sketchfab.com/acrysius?utm_medium=embed&utm_campaign=share-popup&utm_content=dbc2ad2606974de683f2cdc4603fcd04" target="_blank" style="font-weight: bold; color: #1CAAD9;"> acrysius </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=dbc2ad2606974de683f2cdc4603fcd04" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+            <p>3D objekt .obj datotečnega formata, naložen na Sketchfab. Kot je razvidno, je kapica zaradi odsevne površine utrpela nekaj nenatančno določenih točk in izgleda precej udrto. Osebno smo mnenja, da je izdelek še vedno dobro izpadel in je dokaj prisrčen.</p>
+        </div>
+      </div>
+    </div>
+    <br><hr><br>
 
-    <h3>Fotografije projekta</h3>
-    <div class="imgWithText">
-      <img src="photos/naloga7_2.png" alt="Render 3D izdelka z vsemi lučmi in pravilnimi materiali/teksturami">
-      <p>Postopek izdelave s programom Agisoft MetaShape.</p>
-    </div>
-    <div class="imgWithText">
-      <img src="photos/naloga7_1.png" alt="Render 3D izdelka z vsemi lučmi in pravilnimi materiali/teksturami">
-      <p>Prvotni render objekta</p>
-    </div>
-    <div class="imgWithText">
-      <img src="photos/naloga7_3.png" alt="Render 3D izdelka z vsemi lučmi in pravilnimi materiali/teksturami">
-      <p>Izdelovanje texture</p>
-    </div>
-    <div class="imgWithText">
-      <img src="photos/naloga7_4.png" alt="Render 3D izdelka z vsemi lučmi in pravilnimi materiali/teksturami">
-      <p>Končni izdelek</p>
-    </div>
+    <footer>
+      <p>Medijske komunikacije<br>
+      Multimedijske Vsebine za Svetovni Splet<br>
+      ©2020/21</p>
+    </footer>
+  </body>
 </html>
