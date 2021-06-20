@@ -90,39 +90,6 @@ nav {
   background-color: #111111;
 }
 
-.imgWithText {
-  display: inline-block;
-  text-align: justify;
-  width: 30%;
-
-}
-
-.imgWithText img {
-  display: block;
-
-  width: 100%;
-}
-
-.gifWithText {
-  display: inline-block;
-  text-align: justify;
-  width: 20%;
-
-}
-
-.exWithText {
-  display: inline-block;
-  text-align: justify;
-  width: 15%;
-
-}
-
-.exWithText img {
-  display: block;
-
-  width: 100%;
-}
-
 picture {
   display: inline-block;
 }
