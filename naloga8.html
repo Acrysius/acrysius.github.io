@@ -10,10 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <title>MVZSS - Naloga 5</title>
 
     <style >
       x3d {border:2px solid #555555;}
+      model-viewer {width: 100%; height: 500px;}
     </style>
   </head>
   <body>
@@ -59,6 +61,9 @@
           </x3d>
           <p>Datoteka X3D, ki si jo na ustrezno posodobljenih spletnih brskalnikih lahko brez težav ogledujemo. Zaradi razlik v izvozu je izgubila malo barve in tekstur, vidni so tudi prej skriti objekti v .blend datoteki.</p><br>
           <p>Prikaz datoteke .X3D formata v brskalniku z uporabo X3DOM knjižnice. Ogled ne potrebuje vtičnikov in ostalih posebnih lastnosti, vse je poskrbljeno z JavaScript knjižnico.</p>
+        </div>
+        <div class="ImageContainer">
+          <model-viewer src="photos/link_edit.glb" alt="A 3D model of Link figurine from Legend of Zelda: Links Awakening" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls></model-viewer>
         </div>
       </div>
     </div>
