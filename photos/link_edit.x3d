@@ -24,7 +24,7 @@
 			            ambientIntensity="0.0000"
 			            color="1.0000 1.0000 1.0000"
 			            intensity="1.0000"
-			            radius="30.0000" 
+			            radius="30.0000"
 			            location="-0.0000 -0.0000 0.0000"
 			            />
 		</Transform>
@@ -53,6 +53,7 @@
 				<Group DEF="group_ME_Link">
 					<Shape>
 						<Appearance>
+							<ImageTexture url="link.png"></ImageTexture>
 							<Material DEF="MA_Link"
 							          diffuseColor="1.000 1.000 1.000"
 							          specularColor="0.001 0.001 0.001"
@@ -85,7 +86,7 @@
 			            ambientIntensity="0.0000"
 			            color="1.0000 1.0000 1.0000"
 			            intensity="1.0000"
-			            radius="30.0000" 
+			            radius="30.0000"
 			            location="-0.0000 0.0000 0.0000"
 			            />
 		</Transform>
@@ -98,7 +99,7 @@
 			            ambientIntensity="0.0000"
 			            color="1.0000 1.0000 1.0000"
 			            intensity="1.0000"
-			            radius="30.0000" 
+			            radius="30.0000"
 			            location="0.0000 0.0000 0.0000"
 			            />
 		</Transform>
@@ -111,7 +112,7 @@
 			            ambientIntensity="0.0000"
 			            color="1.0000 1.0000 1.0000"
 			            intensity="1.0000"
-			            radius="30.0000" 
+			            radius="30.0000"
 			            location="0.0000 -0.0000 0.0000"
 			            />
 		</Transform>
