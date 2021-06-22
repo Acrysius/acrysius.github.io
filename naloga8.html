@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta charset="utf-8">
+    <script type='text/javascript' src='http://www.x3dom.org/download/x3dom.js'> </script>
+    <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'></link>
+    <link rel="stylesheet" href="css/mmvss.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>MVZSS - Naloga 5</title>
+
+    <style >
+      x3d {border:2px solid #555555;}
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="photos/mvzss_banner.webp" alt="Prikazna grafika za naslovnico spletnega omrežja.">
+    </header>
+    <nav>
+      <div class="navbarPlace">
+        <button class="navButton" onclick="document.location='index.html'">Domov</button>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Naloge</button>
+          <div class="dropdownContent">
+            <a href="naloga1.html">Naloga 1</a>
+            <a href="naloga2.html">Naloga 2</a>
+            <a href="naloga3.html">Naloga 3</a>
+            <a href="naloga4.html">Naloga 4</a>
+            <a href="naloga5.html">Naloga 5</a>
+            <a href="naloga6.html">Naloga 6</a>
+            <a href="naloga7.html">Naloga 7</a>
+          </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="subcontainer">
+        <h1>Naloga 5</h1>
+        <p>Ena izmed težjih nalog, X3DOM je eden izmed mnogih načinov, ki nam omogoča prikaz 3D objektov na spletišču. Po precejšnjem poizvedovanju in popravljanju kode smo najprej izvozili naš prvotni .blend projekt v .x3d datoteko. Nato smo sledili navodilom X3DOM organizacije, da smo ustrezno 3D objekt tudi vstavili na našo spletno stran. Sprva je naloga povzročala nekaj težav, vendar smo poiskali rešitve in jih tudi ustrezno zabeležili.</p>
+        <h2>Prikaz 3D objektov na spletu s pomočjo knjižnice X3DOM</h2>
+        <div class="ImageContainer">
+          <img src="photos/blend_render.webp" alt="Render 3D izdelka z vsemi lučmi in pravilnimi materiali/teksturami">
+          <p>Prikaz 3D objekta, preden smo ga ustrezno izvozili v x3d datotečni format.</p>
+        </div>
+        <div class="ImageContainer">
+          <x3d width="100%" height="500px" showStat="true">
+            <scene>
+              <inline url="photos/link_edit.x3d" render="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" load="true" namespacename="">
+                <appearance>
+                  <ImageTexture url="photos/link.png"></ImageTexture>
+                </appearance>
+              </inline>
+            </scene>
+          </x3d>
+          <p>Datoteka X3D, ki si jo na ustrezno posodobljenih spletnih brskalnikih lahko brez težav ogledujemo. Zaradi razlik v izvozu je izgubila malo barve in tekstur, vidni so tudi prej skriti objekti v .blend datoteki.</p><br>
+          <p>Prikaz datoteke .X3D formata v brskalniku z uporabo X3DOM knjižnice. Ogled ne potrebuje vtičnikov in ostalih posebnih lastnosti, vse je poskrbljeno z JavaScript knjižnico.</p>
+        </div>
+      </div>
+    </div>
+    <br><hr><br>
+    <div class="container">
+      <div class="subcontainer">
+        <p><b>POZOR!</b> Brskalnik zaradi varnostnih razlogov ne dovoljuje nalaganje lokalnih datotek, ko se spletna stran ogleduje takrat, KO ŠE NI OBJAVLJENA NA STREŽNIKU. Za ustrezno konfiguracijo beri <a href="https://dev.to/dengel29/loading-local-files-in-firefox-and-chrome-m9f">sledečo povezavo</a>. Močno priporočamo spletni brskalnik Firefox, saj je njegova konfiguracija izjemno lažja kot pri brskalniku Google Chrome.</p>
+        <p>Hkrati je potrebno biti pozoren tudi na varnost na strežniku samem. Firefox ni želel prebrati X3DOM knjižnice brez posebne komande na začetku -head- značke: "meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"".</p>
+      </div>
+    </div>
+
+
+
+    <footer>
+      <p>Medijske komunikacije<br>
+      Multimedijske Vsebine za Svetovni Splet<br>
+      ©2020/21</p>
+    </footer>
+  </body>
+</html>
