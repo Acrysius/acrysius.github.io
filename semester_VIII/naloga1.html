@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MVZSS - Naloga 1</title>
+    <link rel="stylesheet" href="css/mmvss.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+
+    <script type="text/javascript" src="lib/big.min.js"></script>
+    <script type="text/javascript" src="lib/gl-matrix-min.js"></script>
+    <script type="text/javascript" src="lib/jszip.min.js"></script>
+    <script type="text/javascript" src="lib/core.min.js"></script>
+    <script type="text/javascript" src="lib/geom.min.js"></script>
+    <script type="text/javascript" src="lib/triangulator.min.js"></script>
+    <script type="text/javascript" src="lib/viewmodel.min.js"></script>
+    <script type="text/javascript" src="lib/viewhome.min.js"></script>
+
+  </head>
+  <body>
+    <header>
+      <img src="photos/mvzss_banner.webp" alt="Prikazna grafika za naslovnico spletnega omrežja.">
+    </header>
+    <nav>
+      <div class="navbarPlace">
+        <button class="navButton" onclick="document.location='index.html'">Domov</button>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Naloge</button>
+          <div class="dropdownContent">
+            <a href="naloga1.html">Naloga 1</a>
+            <a href="naloga2.html">Naloga 2</a>
+            <a href="naloga3.html">Naloga 3</a>
+            <a href="naloga4.html">Naloga 4</a>
+            <a href="naloga5.html">Naloga 5</a>
+            <a href="naloga6.html">Naloga 6</a>
+            <a href="naloga7.html">Naloga 7</a>
+          </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="subcontainer">
+        <h1>Naloga 1</h1>
+        <p>Naloga je zajemala delo v programu Sweet Home 3D. Študentje smo morali ustvariti rekreacijo izbranega bivalnega prostora s pomočjo programa, objektov in funkcij, ki jih ponuja. Je brezplačen za uporabo, omogoča pa tudi dodatno nalaganje objektov in tekstur za bolj natančno izdelavo prototipa prostora.</p>
+        <div class="ImageContainer">
+          <img src="photos/sweethome.png" alt="Datoteka Sweet Home 3D v poteku izdelave.">
+          <p>Zajem zaslona datoteke v orodju Sweet Home 3D v postopku izdelave.</p>
+        </div>
+        <br><hr><br>
+        <div class="ImageContainer">
+          <img src="photos/sweethome2.png" alt="Končni zajem zaslona izdelka v programu Sweet Home 3D.">
+          <p>Zajem zaslona končanega izdelka z dodanimi teksturami in lučmi v programu Sweet Home 3D.</p>
+        </div>
+        <br><hr><br>
+      </div>
+
+    </div>
+    <br><hr><br>
+    <div class="container">
+      <div class="subcontainer">
+        <h2>Multimedijski elementi // Vgrajen Sweet Home 3D</h2>
+        <p>Nadgradnja naloge 1, tokrat s posebnim vtičnikom lahko naravnost pregledamo zasnovo stanovanjskega objekta, ustvarjenega v Sweet Home 3D.</p>
+
+      <div class="ImageContainer">
+        <!-- To je SweetHome3D segment, našopana koda-->
+        <div>
+          <!-- Copy the following canvas and components in your page, changing their size / texts and other values if needed  -->
+          <canvas id="viewerCanvas" class="viewerComponent" width="800" height="600"
+                  style="background-color: #CCCCCC; border: 1px solid gray; outline:none" tabIndex="1"></canvas>
+          <div id="viewerProgressDiv" style="width: 400px; position: relative; top: -350px; left: 200px; background-color: rgba(128, 128, 128, 0.7); padding: 20px; border-radius: 25px">
+            <progress id="viewerProgress"  class="viewerComponent" value="0" max="200" style="width: 400px"></progress>
+            <label id="viewerProgressLabel" class="viewerComponent" style="margin-top: 2px; display: block; margin-left: 10px"></label>
+          </div>
+          <div style="margin-top: -60px">
+            <input  id="aerialView"   class="viewerComponent" name="cameraType" type="radio" style="visibility: hidden;"/>
+              <label class="viewerComponent" for="aerialView" style="visibility: hidden;">Aerial view</label>
+            <input  id="virtualVisit" class="viewerComponent" name="cameraType" type="radio" style="visibility: hidden;"/>
+              <label class="viewerComponent" for="virtualVisit" style="visibility: hidden;">Virtual visit</label>
+            <select id="levelsAndCameras" class="viewerComponent" style="visibility: hidden;"></select>
+          </div>
+        </div>
+
+        <script type="text/javascript">
+          var homeUrl = "some_progress.zip";
+          var onerror = function(err) {
+              if (err == "No WebGL") {
+                alert("Sorry, your browser doesn't support WebGL.");
+              } else {
+                console.log(err.stack);
+                alert("Error: " + (err.message  ? err.constructor.name + " " +  err.message  : err));
+              }
+            };
+          var onprogression = function(part, info, percentage) {
+              var progress = document.getElementById("viewerProgress");
+              if (part === HomeRecorder.READING_HOME) {
+                // Home loading is finished
+                progress.value = percentage * 100;
+                info = info.substring(info.lastIndexOf('/') + 1);
+              } else if (part === Node3D.READING_MODEL) {
+                // Models loading is finished
+                progress.value = 100 + percentage * 100;
+                if (percentage === 1) {
+                  document.getElementById("viewerProgressDiv").style.visibility = "hidden";
+                }
+              }
+
+              document.getElementById("viewerProgressLabel").innerHTML =
+                  (percentage ? Math.floor(percentage * 100) + "% " : "") + part + " " + info;
+            };
+
+          // Display home in canvas 3D
+          // Mouse and keyboard navigation explained at
+          // http://sweethome3d.cvs.sf.net/viewvc/sweethome3d/SweetHome3D/src/com/eteks/sweethome3d/viewcontroller/resources/help/en/editing3DView.html
+          // You may also switch between aerial view and virtual visit with the space bar
+          // For browser compatibility, see http://caniuse.com/webgl
+          viewHome("viewerCanvas",    // Id of the canvas
+                   homeUrl,           // URL or relative URL of the home to display
+                   onerror,           // Callback called in case of error
+                   onprogression,     // Callback called while loading
+                  {roundsPerMinute: 0,                    // Rotation speed of the animation launched once home is loaded in rounds per minute, no animation if missing or equal to 0
+                   navigationPanel: "none",               // Displayed navigation arrows, "none" or "default" for default one or an HTML string containing elements with data-simulated-key
+                                                          // attribute set "UP", "DOWN", "LEFT", "RIGHT"... to replace the default navigation panel, "none" if missing
+                   aerialViewButtonId: "aerialView",      // Id of the aerial view radio button, radio buttons hidden if missing
+                   virtualVisitButtonId: "virtualVisit",  // Id of the aerial view radio button, radio buttons hidden if missing
+                   levelsAndCamerasListId: "levelsAndCameras"   // Id of the levels select component, hidden if missing
+               /*, selectableLevels: ["Level 0", "Level 1"] */  // List of displayed levels, all viewable levels if missing
+                  });
+        </script>
+        <button onclick='viewHomeInOverlay("some_progress.zip",
+                    {roundsPerMinute:    1,                        /* Rotation speed of the animation launched once home is loaded in rounds per minute, no animation if missing */
+                     widthByHeightRatio: 4/3,                      /* Size ratio of the displayed canvas */
+                     navigationPanel: "none",                      /* Displayed navigation arrows, "none" or "default" for default one or an HTML string containing elements with data-simulated-key
+                                                                      attribute set "UP", "DOWN", "LEFT", "RIGHT"... to replace the default navigation panel, "none" if missing */
+                     aerialViewButtonText: "Aerial view",          /* Text displayed for aerial view radio button, no radio buttons if missing */
+                     virtualVisitButtonText: "Virtual visit",      /* Text displayed for virtual visit radio button, no radio buttons if missing */
+                  /* selectableLevels: ["Level 0", "Level 1"], */  /* Uncomment to choose the list of displayed levels, no select component if empty array */
+                     viewerControlsAdditionalHTML: "",             /* Additional HTML text appended to controls displayed below the canvas 3D, by default empty */
+                     readingHomeText: "Reading",                   /* Comment displayed while reading home */
+                     readingModelText: "Model",                    /* Comment displayed while reading models */
+                     noWebGLSupportError: "No WebGL support"       /* Error message displayed if the browser do not support WebGL */
+                    })'>View home</button>
+                    <div>
+                      <a href="http://www.sweethome3d.com">Sweet Home 3D</a> HTML5 Viewer / Version 1.2 - Distributed under GNU General Public License
+                    </div>
+
+      </div>
+    </div>
+  </div>
+    <br><hr><br>
+    <footer>
+      <p>Medijske komunikacije<br>
+      Multimedijske Vsebine za Svetovni Splet<br>
+      ©2020/21</p>
+    </footer>
+  </body>
+</html>
