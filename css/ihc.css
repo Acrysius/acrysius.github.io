@@ -139,6 +139,14 @@ picture {
   background-color: none;
 }
 
+.Spreadsheet {
+  display: flex;
+  justify-content: center;
+  width:90%;
+  height: 750px;
+  
+}
+
 .ImageContainer img, iframe {
   width: 100%;
   height: 500px;
