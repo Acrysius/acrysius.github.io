@@ -82,6 +82,8 @@ main {
     background: var(--bg-secondary);
 }
 
+/*Subspace for images and image containers*/
+
 .large-image-container {
     display: flex;
     flex-direction: column;
@@ -90,6 +92,35 @@ main {
 
 .large-image-container img {
     width: 1100px;
+}
+
+.figma_display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.figma_display iframe {
+    width: 1800px;
+    height: 800px;
+}
+
+.gridbox-layout {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    height: 800px;
+}
+
+.gridbox-item {
+    flex: 0 0 33.333333%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    margin: 0 25px 0 25px;
+    text-align: justify;
 }
 
 footer {
