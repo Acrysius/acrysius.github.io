@@ -84,6 +84,27 @@ main {
 
 /*Subspace for images and image containers*/
 
+.medium-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.medium-image-container img {
+    width: 800px;
+}
+
+.two-image-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.two-image-container img {
+    width: 600px;
+}
+
+
 .large-image-container {
     display: flex;
     flex-direction: column;
@@ -110,18 +131,43 @@ main {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    height: 800px;
+    height: auto;
+    
 }
 
 .gridbox-item {
-    flex: 0 0 33.333333%;
+    flex-basis: 0 0 33.333333%;
+    width: 400px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 300px;
+
+    text-align: left;
+    padding: 0 25px 0 25px;
     margin: 0 25px 0 25px;
-    text-align: justify;
+
+    transition: var(--transition-speed);
 }
+
+.gridbox-item img {
+    width: 100%;
+}
+
+.gridbox-layout a {
+    text-decoration: none;
+}
+
+.gridbox-layout a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+td {
+    text-align: center;
+    border: 1px solid var(--bg-secondary);
+    padding: 5px;
+    margin: 2px;
+  }
 
 footer {
     width: 100%;

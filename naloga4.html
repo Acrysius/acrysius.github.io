@@ -1,110 +1,106 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>IČR - Naloga 4</title>
-    <link rel="stylesheet" href="css/ihc.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@100&display=swap" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Kuharček</title>
 
-  </head>
-  <body>
-    <header>
-      <img src="photos/ihc_banner.webp" alt="Prikazna grafika za naslovnico spletnega omrežja.">
-    </header>
-    <nav>
-      <div class="navbarPlace">
-        <button class="navButton" onclick="document.location='index.html'">Domov</button>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+      <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                  <span class="link-text">DOMOV</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="arhiv_nalog.html">
+                  <span class="link-text">NALOGE</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">
+                  <span class="link-text">O PROJEKTU</span>
+              </a>
+          </li>
+      </ul>
+  </nav>
+
+  <main>
+      <h1>CARD SORTING</h1>
+
+      <p>V tej nalogi se seznanimo s konceptom sortiranja kartic. Naša naloga je zavzemala izdelavo kratkega card sortinga, s katerim bi pridobili mentalni vidik
+        uporabnikov, kje bi oni določene funkcije in podatke našli v hierarhiji našega projekta.
+        <br><br>
+        Projekt card sortinga smo izvedli s pomočjo spletne platforme <a href="https://www.optimalworkshop.com/">OPTIMAL WORKSHOP</a>. Ta nam je omogočila hitro izdelavo card sortinga,
+        katerega smo nato delili z našimi potencialnimi uporabniki. V zastonjskem planu nam je bila omogočeno določiti le 20 kartic, vendar menimo, da je to za okvir našega projekta trenutno dovolj.
+        Odločili smo se za uporabo zaprtega tipa sortiranja, kjer so uporabniki vstavljali kartice v ustrezne kategorije brez možnosti določitve lastnih kategorij. V tabeli spodaj so zapisane kartice, ki so bile uporabljene.
+      </p>
+      <table>
+        <tr>
+          <td>Naštej sestavine in njihove količine.</td>                
+          <td>Navedi uporabljeno opremo (pribor, posoda).</td>
+          <td>Napiši postopek kuhanja.</td>
+          <td>Navedi čas priprave na kuhanje in čas priprave obroka.</td>
+          <td>Naloži fotografijo obroka ali izberi grafiko iz knjižnice.</td>
+        </tr>
+        <tr>
+          <td>Dodaj naslov in iskalne značke.</td>                
+          <td>Naloži fotografijo profila.</td>
+          <td>Spremeni osebne podatke.</td>
+          <td>Registracija in prijava.</td>
+          <td>Pregled ustvarjenih receptov.</td>
+        </tr>
+        <tr>
+          <td>Strinjanje s pogoji uporabe in varstvom osebnih podatkov.</td>                
+          <td>Navedi ključno besedo za iskanje.</td>
+          <td>Označi značke za iskanje.</td>
+          <td>Označi čas kuhanja in priprave.</td>
+          <td>Pregled in dodajanje komentarjev.</td>
+        </tr>
+        <tr>
+          <td>Shranjevanje recepta.</td>                
+          <td>Pregled in dodajanje všečkov, ocene.</td>
+          <td>Iskanje po shranjenih receptih.</td>
+          <td>Priponka za najbolj priljubljene recepte.</td>
+          <td>Odstranitev recepta iz shrambe.</td>
+        </tr>
+      </table>
+
+      <div class="large-image-container">
+          <img src="photos/pregled.webp" alt="Prepost pregled o udeležncih raziskave, ter njihovem reševanju.">
       </div>
-      <div class="dropdown">
-        <button class="dropbtn">Naloge</button>
-          <div class="dropdownContent">
-            <a href="naloga1.html">Naloga 1 // Persone</a>
-            <a href="naloga2.html">Naloga 2 // Needfinding</a>
-            <a href="naloga3.html">Naloga 3 // Delovna analiza</a>
-            <a href="naloga4.html">Naloga 4 // Card Sorting</a>
-            <a href="naloga5.html">Naloga 5 // Storyboard</a>
-            <a href="naloga6.html">Naloga 6 // Prototip</a>
-          </div>
+      <p>Kot lahko vidimo na zgornji grafiki, je od 17 udeležencev card sorting dokončalo le 10 udeležencev. Okvirna časovna zahtevnost je bila podana med 5 in 10 minutami, vendar so
+        v povprečju nalogo rešili mnogo hitreje. Vsi udeleženci pa prihajajo iz Slovenije. 
+      </p>
+      <div class="large-image-container">
+        <img src="photos/pregled_rezultatov.webp" alt="Končni rezultati sortiranja kartic. Podatki so predstavljeni tabelarično, številke označujejo, koliko udeležencev je izbrano kartico premaknilo v dano kategorijo.">
       </div>
-    </nav>
-    <div class="container">
-      <div class="subcontainer">
-        <h1>Naloga 4 - Card Sorting</h1>
-        <p>V tej nalogi se seznanimo s konceptom sortiranja kartic. Naša naloga je zavzemala izdelavo kratkega card sortinga, s katerim bi pridobili mentalni vidik
-          uporabnikov, kje bi oni določene funkcije in podatke našli v hierarhiji našega projekta.<br>
-          Projekt card sortinga smo izvedli s pomočjo spletne platforme <a href="https://www.optimalworkshop.com/">OPTIMAL WORKSHOP</a>. Ta nam je omogočila hitro izdelavo card sortinga,
-          katerega smo nato delili z našimi potencialnimi uporabniki. V zastonjskem planu nam je bila omogočeno določiti le 20 kartic, vendar menimo, da je to za okvir našega projekta trenutno dovolj.
-          Odločili smo se za uporabo zaprtega tipa sortiranja, kjer so uporabniki vstavljali kartice v ustrezne kategorije brez možnosti določitve lastnih kategorij.</p>
-          <div class="ImageContainer">
-            <table>
-              <tr>
-                <td>Naštej sestavine in njihove količine.</td>                
-                <td>Navedi uporabljeno opremo (pribor, posoda).</td>
-                <td>Napiši postopek kuhanja.</td>
-                <td>Navedi čas priprave na kuhanje in čas priprave obroka.</td>
-                <td>Naloži fotografijo obroka ali izberi grafiko iz knjižnice.</td>
-              </tr>
-              <tr>
-                <td>Dodaj naslov in iskalne značke.</td>                
-                <td>Naloži fotografijo profila.</td>
-                <td>Spremeni osebne podatke.</td>
-                <td>Registracija in prijava.</td>
-                <td>Pregled ustvarjenih receptov.</td>
-              </tr>
-              <tr>
-                <td>Strinjanje s pogoji uporabe in varstvom osebnih podatkov.</td>                
-                <td>Navedi ključno besedo za iskanje.</td>
-                <td>Označi značke za iskanje.</td>
-                <td>Označi čas kuhanja in priprave.</td>
-                <td>Pregled in dodajanje komentarjev.</td>
-              </tr>
-              <tr>
-                <td>Shranjevanje recepta.</td>                
-                <td>Pregled in dodajanje všečkov, ocene.</td>
-                <td>Iskanje po shranjenih receptih.</td>
-                <td>Priponka za najbolj priljubljene recepte.</td>
-                <td>Odstranitev recepta iz shrambe.</td>
-              </tr>
-            </table>
-            <p>Seznam kartic, ki so bile ponujene udeležencem.</p>
-          </div>
-          <br><hr><br> 
-          <div class="ImageContainer">
-            <img src="photos/pregled.png" alt="Prepost pregled o udeležncih raziskave, ter njihovem reševanju.">
-          </div>
-          <p>Kot lahko vidimo na zgornji grafiki, je od 17 udeležencev card sorting dokončalo le 10 udeležencev. Okvirna časovna zahtevnost je bila podana med 5 in 10 minutami, vendar so
-            v povprečju nalogo rešili mnogo hitreje. Vsi udeleženci pa prihajajo iz Slovenije. 
-        </p>
-        <div class="ImageContainer">
-          <img src="photos/pregled_rezultatov.png" alt="Končni rezultati sortiranja kartic. Podatki so predstavljeni tabelarično, številke označujejo, koliko udeležencev je izbrano kartico premaknilo v dano kategorijo.">
-          <p>Sodeč po tabeli na zgornji sliki smo pridobili podatke, da so udeleženci dokaj enotno sortirali kartice v kategorije. Večina je tudi sledila našim pričakovanjem za razporeditevc. Veliko
-            odstopanje se je pokazalo pri pregledu ustvarjenih receptov, shranjevanju recepta in priponki za najbolj priljubljene recepte. To nam kaže da imajo udeleženci dokaj drugačna pričakovanja
-            od tega, kamor sodi izbrana funkcionalnost ali pa smo površno ubesedili kartico in tako je njen pomen bil zmedujoč za udeležence, kar se pokaže tudi v zelo ne-enotnem kategoriziranju
-            navedenih kartic.
-          </p>
-        </div>
-        <br><hr><br>
-        <p>Sortiranje kartic nam je tako pokazalo, kakšno je razmišlanje udeležencev in s katero kategorijo povezujejo dane kartice, ki so jim bile ponujene. Hkrati nam je dalo vedeti,
-          da moramo biti pazljivi pri umeščanje določenih funkcionalnosti, saj se uporabniki niso zmogli enotno odločiti, v katero kategorijo funkcionalnosti bi spadale.
-        </p>
-        <div class="ImageContainer">
-          <img src="photos/card_sorting_kategorije.png" alt="Tabelarično razdeljene in popravljene kartice po kategorijah funkcionalnosti">
-          <p>Po pridobljenih podatkih smo nato po mentaliti udeležencev tabelarično uredili in prilagodili funkcionalnosti pri določeni kategoriji sistema. Ta tabela nam bo v
-            pomoč, ko bomo morali ustvariti storyboard za nadaljnji razvoj aplikacije Kuharček.
-          </p>
-        </div> 
+      <p>Sodeč po tabeli na zgornji sliki smo pridobili podatke, da so udeleženci dokaj enotno sortirali kartice v kategorije. Večina je tudi sledila našim pričakovanjem za razporeditevc. Veliko
+        odstopanje se je pokazalo pri pregledu ustvarjenih receptov, shranjevanju recepta in priponki za najbolj priljubljene recepte. To nam kaže da imajo udeleženci dokaj drugačna pričakovanja
+        od tega, kamor sodi izbrana funkcionalnost ali pa smo površno ubesedili kartico in tako je njen pomen bil zmedujoč za udeležence, kar se pokaže tudi v zelo ne-enotnem kategoriziranju
+        navedenih kartic.
+      </p>
+
+      <p>Sortiranje kartic nam je tako pokazalo, kakšno je razmišlanje udeležencev in s katero kategorijo povezujejo dane kartice, ki so jim bile ponujene. Hkrati nam je dalo vedeti,
+        da moramo biti pazljivi pri umeščanje določenih funkcionalnosti, saj se uporabniki niso zmogli enotno odločiti, v katero kategorijo funkcionalnosti bi spadale.
+      </p>
+      <div class="large-image-container">
+        <img src="photos/card_sorting_kategorije.webp" alt="Tabelarično razdeljene in popravljene kartice po kategorijah funkcionalnosti">
       </div>
-      </div>
-    <br><hr><br>
-    <footer>
+      <p>Po pridobljenih podatkih smo nato po mentaliti udeležencev tabelarično uredili in prilagodili funkcionalnosti pri določeni kategoriji sistema. Ta tabela nam bo v
+        pomoč, ko bomo morali ustvariti storyboard za nadaljnji razvoj aplikacije Kuharček.
+      </p>
+  </main>
+
+  <footer>
       <p>Medijske komunikacije<br>
-      Interakcija Človek-Računalnik<br>
-      ©2021/22</p>
-    </footer>
-  </body>
-</html>
+          Interakcija Človek-Računalnik<br>
+          ©2021/22</p>
+  </footer>
+
+  
+</body>
+  
