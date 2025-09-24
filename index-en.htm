@@ -6,6 +6,18 @@
     <title>Near.si</title>
     <!-- Bootstrap CSS -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    /* Ensure links with .text-reset look identical to surrounding text in all states */
+    a.text-reset, a.text-reset:visited {
+        color: inherit !important;
+        text-decoration: none !important;
+    }
+    a.text-reset:hover, a.text-reset:focus, a.text-reset:active {
+        color: inherit !important;
+        text-decoration: none !important;
+        outline: none;
+    }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-light bg-light">
@@ -34,9 +46,9 @@
                 <li class="nav-item"><a class="nav-link" href="portfolio-en.htm">Portfolio</a></li>
             </ul>
             <div class="navbar-nav w-100 mt-2 col d-flex justify-content-end">
-                <p class="mb-0 text-end">Gasparijeva ulica 14,<br>1380, Slovenia<br><br>
-                <a href="tel:+38640418640" class="text-decoration-none">+386 40 418 640</a><br><br>
-                <a href="mailto:info@near.si" class="text-decoration-none">info@near.si</a></p>
+                <p class="mb-0 text-end">Gasparijeva ulica 14,<br>1380 Cerknica, Slovenia<br><br>
+                <a href="tel:+38640418640" class="text-decoration-none text-reset">+386 40 418 640</a><br><br>
+                <a href="mailto:info@near.si" class="text-decoration-none text-reset">info@near.si</a></p>
             </div>
         </div>
         
@@ -46,22 +58,127 @@
 <div class="container-fluid min-vh-100 bg-secondary text-light d-flex align-items-center">
     <div class="container">
         <div class="row">
-            <div class="col-12 text-center">
-                <p class="display-4">To je novovodobna amerika</p>
+            <div class="col-5">
+                <h1 class="">Predstavite svoje želje s prilagojenimi rešitvami</h1>
+                <p>MULTIMEDIJSKE STORITVE ZA POSAMEZNIKE IN PODJETJA</p>
+                <a class="btn btn-primary" href="#" role="button">Storitve</a>
+                <a class="btn btn-primary" href="#" role="button">Portfolio</a>
+            </div>
+            <div class="col-7 text-center">
+                <img src="images/placeholders/landing-page.png" class="img-fluid" alt="vstavi tekst tukaj.">
             </div>
         </div>
     </div>
 </div>
 <!--Partners section-->
-<div class="container-fluid bg-primary text-light d-flex align-items-center" style="height:25vh;">
-    <div class="container">
+<div class="container-fluid bg-primary text-light d-flex align-items-center">
+    <div class="container m-3">
         <div class="row">
-            <div class="col-12 text-center">
-                <p class="display-4">To je staromodna Slovenija</p>
+            <div class="col-4">
+                <h2 class="">Postanite naš poslovni partner</h2>
+            </div>
+            <div class="col-8">
+                <img src="images/placeholders/batch_g11.png" alt="placeholder za partnerje." class="img-fluid m-2">
+                <img src="images/placeholders/batch_g13.png" alt="placeholder za partnerje." class="img-fluid m-2">
+                <img src="images/placeholders/batch_g14.png" alt="placeholder za partnerje." class="img-fluid m-2">
+                <img src="images/placeholders/batch_g15.png" alt="placeholder za partnerje." class="img-fluid m-2">
+                <img src="images/placeholders/batch_text8.png" alt="placeholder za partnerje." class="img-fluid m-2">
             </div>
         </div>
     </div>
 </div>
+<!--Services section-->
+<div class="container-fluid bg-dark text-light d-flex align-items-center min-vh-100">
+    <div class="container">
+        <h2 class="">Storitve, ki jih ponujamo za posameznike in podjetja</h2>
+        <div class="row">
+            <div class="col-2">
+                <img class="img-fluid" src="images/placeholders/icons_g8.png">
+            </div>
+            <div class="col-4">
+                <h3>Fotografija</h3>
+                <p>It is easy to use with standardised user interface and enable one click switch among different product services.</p>
+            </div>
+            <div class="col-2">
+                <img class="img-fluid" src="images/placeholders/icons_g10.png">
+            </div>
+            <div class="col-4">
+                <h3>Video produkcija</h3>
+                <p>It is easy to use with standardised user interface and enable one click switch among different product services.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <img class="img-fluid" src="images/placeholders/icons_g11.png">
+            </div>
+            <div class="col-4">
+                <h3>Spletno oblikovanje</h3>
+                <p>It is easy to use with standardised user interface and enable one click switch among different product services.</p>
+            </div>
+            <div class="col-2">
+                <img class="img-fluid" src="images/placeholders/icons_g9.png">
+            </div>
+            <div class="col-4">
+                <h3>Digitalizacija resničnosti</h3>
+                <p>It is easy to use with standardised user interface and enable one click switch among different product services.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Questions-->
+<div class="container-fluid bg-primary text-light d-flex align-items-center" style="height:75vh;">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <h2>Imate še vedno vprašanja?</h2>
+            </div>
+            <div class="col-8">
+                <h3>Near</h3>
+                <p>Kdo smo?</p>
+                <p>Če bi radi prišli v kontakt ali karkoli, potem si lahko izberete naslednje metode.</p>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+<footer class="container-fluid bg-secondary text-light d-flex align-items-center">
+    <div class="container">    
+        <div class="row">
+                <div class="col-12 col-md-3">
+                    <p>O podjetju</p>
+                    <p>Ponujamo različne multimedijske storitve za podjetja in posameznike.</p>
+                </div>
+                <div class="col-12 col-md-3">
+                    <p>Pisarna</p>
+                    <p>Gasparijeva ulica 14,<br>1380 Cerknica, SI<br><br>
+                        <a href="tel:+38640418640" class="text-decoration-none text-reset">+386 40 418 640</a><br><br>
+                        <a href="mailto:info@near.si" class="text-decoration-none text-reset">info@near.si</a></p>
+                </div>
+                <div class="col-12 col-md-3">
+                    <p>Finančni podatki</p>
+                    <p>Trr: SI56 0284 3026 5890 566</p>
+                    <p>DŠ: 6761 4035</p>
+                </div>
+                <div class="col-12 col-md-3">
+                    <p>Sledite nam</p>
+                    <p>Pogled v zakulisje</p>
+                    <a href="#" target="_blank"><img src="images/placeholders/flatfish-2.png" alt="Facebook"></a>
+                    <a href="#" target="_blank"><img src="images/placeholders/light-2.png" alt="X"></a>
+                    <a href="#" target="_blank"><img src="images/placeholders/crab-16.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col justify-content-start">
+                    <p>© 2025 Near. Vse pravice pridržane</p>
+                </div class="col">
+                <div class="col justify-content-end">
+                    <p>S.P. Martin Nino Truden</p>
+                </div class="col">
+            </div>
+    </div>
+</footer>
 
 
     <!-- Bootstrap JS Bundle (includes Popper) -->
