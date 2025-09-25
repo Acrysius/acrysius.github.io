@@ -6,6 +6,7 @@
     <title>Near.si</title>
     <!-- Bootstrap CSS -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="near-si-css/near-si.css" rel="stylesheet">
     <style>
     /* Ensure links with .text-reset look identical to surrounding text in all states */
     a.text-reset, a.text-reset:visited {
@@ -41,8 +42,8 @@
         <div class="collapse navbar-collapse row" id="mainNavbar">
             <ul class="navbar-nav w-100 mt-2 col">
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="index-en.htm">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="services-en.htm">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="about-en.htm">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="portfolio-en.htm">Portfolio</a></li>
             </ul>
             <div class="navbar-nav w-100 mt-2 col d-flex justify-content-end">
@@ -58,13 +59,13 @@
 <div class="container-fluid min-vh-100 bg-secondary text-light d-flex align-items-center">
     <div class="container">
         <div class="row">
-            <div class="col-5">
+            <div class="col-12 col-md-5 py-md-5">
                 <h1 class="">Predstavite svoje želje s prilagojenimi rešitvami</h1>
                 <p>MULTIMEDIJSKE STORITVE ZA POSAMEZNIKE IN PODJETJA</p>
                 <a class="btn btn-primary" href="#" role="button">Storitve</a>
                 <a class="btn btn-primary" href="#" role="button">Portfolio</a>
             </div>
-            <div class="col-7 text-center">
+            <div class="col-12 col-md-7 text-center py-5">
                 <img src="images/placeholders/landing-page.png" class="img-fluid" alt="vstavi tekst tukaj.">
             </div>
         </div>
@@ -88,37 +89,37 @@
     </div>
 </div>
 <!--Services section-->
-<div class="container-fluid bg-dark text-light d-flex align-items-center py-5">
+<div id="services" class="container-fluid bg-dark text-light d-flex align-items-center py-5">
     <div class="container">
         <h2 class="">Storitve, ki jih ponujamo za posameznike in podjetja</h2>
         <div class="row">
-            <div class="col-3 col-md-2 py-4">
+            <div class="services-image">
                 <img class="img-fluid" src="images/placeholders/icons_g8.png">
             </div>
-            <div class="col-9 col-md-4 py-4">
+            <div class="services-text">
                 <h3>Fotografija</h3>
                 <p>It is easy to use with standardised user interface and enable one click switch among different product services.</p>
             </div>
-            <div class="col-2">
+            <div class="services-image">
                 <img class="img-fluid" src="images/placeholders/icons_g10.png">
             </div>
-            <div class="col-4">
+            <div class="services-text">
                 <h3>Video produkcija</h3>
                 <p>It is easy to use with standardised user interface and enable one click switch among different product services.</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-2">
+            <div class="services-image">
                 <img class="img-fluid" src="images/placeholders/icons_g11.png">
             </div>
-            <div class="col-4">
+            <div class="services-text">
                 <h3>Spletno oblikovanje</h3>
                 <p>It is easy to use with standardised user interface and enable one click switch among different product services.</p>
             </div>
-            <div class="col-2">
+            <div class="services-image">
                 <img class="img-fluid" src="images/placeholders/icons_g9.png">
             </div>
-            <div class="col-4">
+            <div class="services-text">
                 <h3>Digitalizacija resničnosti</h3>
                 <p>It is easy to use with standardised user interface and enable one click switch among different product services.</p>
             </div>
@@ -155,18 +156,31 @@
         </div>
     </div>
 </div>
-<!--Photo gallery reel-->    
-<div class="container-fluid bg-secondary text-light d-flex align-items-center py-5" >
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <p>Just some content to pad the style</p>
-            </div>
-        </div>
+<!--Photo gallery reel--> 
+
+<div class="container-fluid bg-secondary text-light d-flex align-items-center py-5">
+    <div class="photo-carousel" aria-label="Photo gallery carousel">
+      <div class="photo-track" role="list">
+                <div class="photo-group" aria-hidden="false">
+                    <div class="photo" role="listitem"><img src="images/placeholders/batch_g11.png" alt="Partner 1"></div>
+                    <div class="photo" role="listitem"><img src="images/placeholders/batch_g13.png" alt="Partner 2"></div>
+                    <div class="photo" role="listitem"><img src="images/placeholders/batch_g14.png" alt="Partner 3"></div>
+                    <div class="photo" role="listitem"><img src="images/placeholders/batch_g15.png" alt="Partner 4"></div>
+                    <div class="photo" role="listitem"><img src="images/placeholders/batch_text8.png" alt="Partner 5"></div>
+                </div>
+                <!-- duplicate for seamless loop -->
+                <div class="photo-group" aria-hidden="true">
+                    <div class="photo" role="listitem"><img src="images/placeholders/batch_g11.png" alt="Partner 1"></div>
+                    <div class="photo" role="listitem"><img src="images/placeholders/batch_g13.png" alt="Partner 2"></div>
+                    <div class="photo" role="listitem"><img src="images/placeholders/batch_g14.png" alt="Partner 3"></div>
+                    <div class="photo" role="listitem"><img src="images/placeholders/batch_g15.png" alt="Partner 4"></div>
+                    <div class="photo" role="listitem"><img src="images/placeholders/batch_text8.png" alt="Partner 5"></div>
+                </div>
+      </div>
     </div>
 </div>
 <!--ekipa-->
-<div class="container-fluid bg-primary text-light d-flex align-items-center py-5" >
+<div id="about" class="container-fluid bg-primary text-light d-flex align-items-center py-5" >
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-4">
@@ -175,16 +189,16 @@
             </div>
             <div class="col-12 col-md-8">
                 <div class="row">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6 text-center text-md-end px-md-0">
                         <img class="img-fluid" src="images/placeholders/profile1.png" alt="Prva oseba in njen opis">
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6 text-center text-md-start px-md-0">
                         <img class="img-fluid" src="images/placeholders/profile2.png" alt="Prva oseba in njen opis">
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6 text-center text-md-end px-md-0">
                         <img class="img-fluid" src="images/placeholders/profile3.png" alt="Prva oseba in njen opis">
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6 text-center text-md-start px-md-0">
                         <img class="img-fluid" src="images/placeholders/profile4.png" alt="Prva oseba in njen opis">
                     </div>
                 </div>
@@ -196,22 +210,25 @@
 <footer class="container-fluid bg-secondary text-light d-flex align-items-center py-5">
     <div class="container">    
         <div class="row">
-                <div class="col-12 col-md-3">
+                <div class="footer-text">
                     <p>O podjetju</p>
                     <p>Ponujamo različne multimedijske storitve za podjetja in posameznike.</p>
                 </div>
-                <div class="col-12 col-md-3">
+                <hr class="d-block d-md-none">
+                <div class="footer-text">
                     <p>Pisarna</p>
                     <p>Gasparijeva ulica 14,<br>1380 Cerknica, SI<br><br>
                         <a href="tel:+38640418640" class="text-decoration-none text-reset">+386 40 418 640</a><br><br>
                         <a href="mailto:info@near.si" class="text-decoration-none text-reset">info@near.si</a></p>
                 </div>
-                <div class="col-12 col-md-3">
+                <hr class="d-block d-md-none">
+                <div class="footer-text">
                     <p>Finančni podatki</p>
                     <p>Trr: SI56 0284 3026 5890 566</p>
                     <p>DŠ: 6761 4035</p>
                 </div>
-                <div class="col-12 col-md-3">
+                <hr class="d-block d-md-none">
+                <div class="footer-text">
                     <p>Sledite nam</p>
                     <p>Pogled v zakulisje</p>
                     <a href="#" target="_blank"><img src="images/placeholders/flatfish-2.png" alt="Facebook"></a>
@@ -221,10 +238,10 @@
             </div>
             <hr>
             <div class="row">
-                <div class="col justify-content-start">
+                <div class="col text-start">
                     <p>© 2025 Near. Vse pravice pridržane</p>
                 </div class="col">
-                <div class="col justify-content-end">
+                <div class="col text-end">
                     <p>S.P. Martin Nino Truden</p>
                 </div class="col">
             </div>

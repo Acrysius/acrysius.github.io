@@ -31,3 +31,80 @@
 @import "../node_modules/bootstrap/scss/utilities/api";
 
 // 8. Add additional custom code here
+.services-image {
+    @extend .col-3;
+    @extend .col-md-2;
+    @extend .py-4;
+};
+
+.services-text {
+    @extend .col-9;
+    @extend .col-md-4;
+    @extend .py-4;
+};
+
+.footer-text {
+    @extend .col-12;
+    @extend .col-md-3;
+    @extend .text-center;
+    @extend .text-md-start;
+};
+
+/* Infinite-scrolling photo carousel */
+.photo-carousel {
+    overflow: hidden;
+    width: 100%;
+    padding: 1rem 0;
+    /* make carousel full-bleed across the viewport (works inside centered containers) */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+
+    .photo-track {
+        display: flex;
+        width: max-content;
+        align-items: center;
+        /* animate a translation equal to half the track (we duplicate content) */
+        animation: scroll-left 28s linear infinite;
+    }
+
+    .photo-group {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .photo {
+        flex: 0 0 auto;
+        /* responsive thumbnail width */
+        width: clamp(120px, 18vw, 220px);
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+    }
+
+    /* pause on hover or focus */
+    &:hover .photo-track,
+    &:focus-within .photo-track {
+        animation-play-state: paused;
+    }
+
+    /* accessibility: reduce motion */
+    @media (prefers-reduced-motion: reduce) {
+        .photo-track {
+            animation: none;
+        }
+    }
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+

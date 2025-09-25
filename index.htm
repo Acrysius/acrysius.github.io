@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html lang="sl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Near.si</title>
     <!-- Bootstrap CSS -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="near-si-css/near-si.css" rel="stylesheet">
+    <style>
+    /* Ensure links with .text-reset look identical to surrounding text in all states */
+    a.text-reset, a.text-reset:visited {
+        color: inherit !important;
+        text-decoration: none !important;
+    }
+    a.text-reset:hover, a.text-reset:focus, a.text-reset:active {
+        color: inherit !important;
+        text-decoration: none !important;
+        outline: none;
+    }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-light bg-light">
@@ -15,8 +28,8 @@
         <!-- Language switcher always visible -->
         <div class="d-flex align-items-center">
             <ul class="list-inline mb-0 me-3">
-                <li class="list-inline-item" aria-current="page">SI</li>
-                <li class="list-inline-item"><a href="index-en.htm" class="text-decoration-none">EN</a></li>
+                <li class="list-inline-item"><a href="index.htm" class="text-decoration-none">SI</a></li>
+                <li class="list-inline-item" aria-current="page">EN</li>
             </ul>
             
             <!-- Dropdown toggle button -->
@@ -26,27 +39,234 @@
         </div>
 
         <!-- Collapsible navigation menu -->
-        <div class="collapse navbar-collapse" id="mainNavbar">
-            <ul class="navbar-nav w-100 mt-2">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.htm">Domov</a></li>
-                <li class="nav-item"><a class="nav-link" href="storitve.htm">Storitve</a></li>
-                <li class="nav-item"><a class="nav-link" href="o-nas.htm">O nas</a></li>
-                <li class="nav-item"><a class="nav-link" href="portfolio.htm">Portfolio</a></li>
+        <div class="collapse navbar-collapse row" id="mainNavbar">
+            <ul class="navbar-nav w-100 mt-2 col">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="index-en.htm">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="portfolio-en.htm">Portfolio</a></li>
             </ul>
+            <div class="navbar-nav w-100 mt-2 col d-flex justify-content-end">
+                <p class="mb-0 text-end">Gasparijeva ulica 14,<br>1380 Cerknica, Slovenia<br><br>
+                <a href="tel:+38640418640" class="text-decoration-none text-reset">+386 40 418 640</a><br><br>
+                <a href="mailto:info@near.si" class="text-decoration-none text-reset">info@near.si</a></p>
+            </div>
         </div>
-        <div>
-            <p>Gasparijeva ulica 14,<br>1380, Slovenija</p>
-            
-        </div>
+        
     </div>
 </nav>
-
-
-
-
-    <div>
-
+<!--Landing page-->
+<div class="container-fluid min-vh-100 bg-secondary text-light d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-5 py-md-5">
+                <h1 class="">Predstavite svoje želje s prilagojenimi rešitvami</h1>
+                <p>MULTIMEDIJSKE STORITVE ZA POSAMEZNIKE IN PODJETJA</p>
+                <a class="btn btn-primary" href="#services" role="button">Storitve</a>
+                <a class="btn btn-primary" href="#" role="button">Portfolio</a>
+            </div>
+            <div id="landing-carousel" class="col-12 col-md-7 text-center py-5 carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="images/placeholders/landing-page.png" class="img-fluid" alt="vstavi tekst tukaj.">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="images/placeholders/landing-page2.png" class="img-fluid" alt="vstavi tekst tukaj.">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="images/placeholders/landing-page3.png" class="img-fluid" alt="vstavi tekst tukaj.">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#landing-carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#landing-carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
     </div>
+</div>
+<!--Partners section-->
+<div class="container-fluid bg-primary text-light d-flex align-items-center py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <h2 class="">Postanite naš poslovni partner</h2>
+            </div>
+            <div class="col-12 col-md-8">
+                <img src="images/placeholders/batch_g11.png" alt="placeholder za partnerje." class="img-fluid m-2">
+                <img src="images/placeholders/batch_g13.png" alt="placeholder za partnerje." class="img-fluid m-2">
+                <img src="images/placeholders/batch_g14.png" alt="placeholder za partnerje." class="img-fluid m-2">
+                <img src="images/placeholders/batch_g15.png" alt="placeholder za partnerje." class="img-fluid m-2">
+                <img src="images/placeholders/batch_text8.png" alt="placeholder za partnerje." class="img-fluid m-2">
+            </div>
+        </div>
+    </div>
+</div>
+<!--Services section-->
+<div id="services" class="container-fluid bg-dark text-light d-flex align-items-center py-5">
+    <div class="container">
+        <h2 class="">Storitve, ki jih ponujamo za posameznike in podjetja</h2>
+        <div class="row">
+            <div class="services-image">
+                <img class="img-fluid" src="images/placeholders/icons_g8.png">
+            </div>
+            <div class="services-text">
+                <h3>Fotografija</h3>
+                <p>It is easy to use with standardised user interface and enable one click switch among different product services.</p>
+            </div>
+            <div class="services-image">
+                <img class="img-fluid" src="images/placeholders/icons_g10.png">
+            </div>
+            <div class="services-text">
+                <h3>Video produkcija</h3>
+                <p>It is easy to use with standardised user interface and enable one click switch among different product services.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="services-image">
+                <img class="img-fluid" src="images/placeholders/icons_g11.png">
+            </div>
+            <div class="services-text">
+                <h3>Spletno oblikovanje</h3>
+                <p>It is easy to use with standardised user interface and enable one click switch among different product services.</p>
+            </div>
+            <div class="services-image">
+                <img class="img-fluid" src="images/placeholders/icons_g9.png">
+            </div>
+            <div class="services-text">
+                <h3>Digitalizacija resničnosti</h3>
+                <p>It is easy to use with standardised user interface and enable one click switch among different product services.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Questions-->
+<div class="container-fluid bg-primary text-light d-flex align-items-center py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <h2>Imate še vedno vprašanja?</h2>
+            </div>
+            <div class="col-12 col-md-8">
+                <h3>Near</h3>
+                <p>Kdo smo?</p>
+                <p>Če bi radi prišli v kontakt ali karkoli, potem si lahko izberete naslednje metode.</p>
+                <a href="#sestanek" data-bs-toggle="collapse" class="text-decoration-none text-reset">Sestanek +</a>
+                <hr>
+                <div class="collapse" id="sestanek">
+                    <p>Tu noter pa se skriva vsebina ki je ne poznam. Bo že nekaj.</p>
+                </div>
+                <a href="#razvoj" data-bs-toggle="collapse" class="text-decoration-none text-reset">Razvoj +</a>
+                <hr>
+                <div class="collapse" id="razvoj">
+                    <p>Tu noter pa se skriva vsebina ki je ne poznam. Bo že nekaj.</p>
+                </div>
+                <a href="#sodelovanje" data-bs-toggle="collapse" class="text-decoration-none text-reset">Sodelovanje +</a>
+                <hr>
+                <div class="collapse" id="sodelovanje">
+                    <p>Tu noter pa se skriva vsebina ki je ne poznam. Bo že nekaj.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Photo gallery reel--> 
+
+<div class="container-fluid bg-secondary text-light d-flex align-items-center py-5">
+    <div class="photo-carousel" aria-label="Photo gallery carousel">
+      <div class="photo-track" role="list">
+                <div class="photo-group" aria-hidden="false">
+                    <div class="photo" role="listitem"><img src="images/placeholders/batch_g11.png" alt="Partner 1"></div>
+                    <div class="photo" role="listitem"><img src="images/placeholders/batch_g13.png" alt="Partner 2"></div>
+                    <div class="photo" role="listitem"><img src="images/placeholders/batch_g14.png" alt="Partner 3"></div>
+                    <div class="photo" role="listitem"><img src="images/placeholders/batch_g15.png" alt="Partner 4"></div>
+                    <div class="photo" role="listitem"><img src="images/placeholders/batch_text8.png" alt="Partner 5"></div>
+                </div>
+                <!-- duplicate for seamless loop -->
+                <div class="photo-group" aria-hidden="true">
+                    <div class="photo" role="listitem"><img src="images/placeholders/batch_g11.png" alt="Partner 1"></div>
+                    <div class="photo" role="listitem"><img src="images/placeholders/batch_g13.png" alt="Partner 2"></div>
+                    <div class="photo" role="listitem"><img src="images/placeholders/batch_g14.png" alt="Partner 3"></div>
+                    <div class="photo" role="listitem"><img src="images/placeholders/batch_g15.png" alt="Partner 4"></div>
+                    <div class="photo" role="listitem"><img src="images/placeholders/batch_text8.png" alt="Partner 5"></div>
+                </div>
+      </div>
+    </div>
+</div>
+<!--ekipa-->
+<div id="about" class="container-fluid bg-primary text-light d-flex align-items-center py-5" >
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <h2>Ustvarite kakovostne projekte z odličnimi ljudmi</h2>
+                <p>Inovativne rešitve, ki ustrezajo vašim željam in potrebam.</p>
+            </div>
+            <div class="col-12 col-md-8">
+                <div class="row">
+                    <div class="col-12 col-md-6 text-center text-md-end px-md-0">
+                        <img class="img-fluid" src="images/placeholders/profile1.png" alt="Prva oseba in njen opis">
+                    </div>
+                    <div class="col-12 col-md-6 text-center text-md-start px-md-0">
+                        <img class="img-fluid" src="images/placeholders/profile2.png" alt="Prva oseba in njen opis">
+                    </div>
+                    <div class="col-12 col-md-6 text-center text-md-end px-md-0">
+                        <img class="img-fluid" src="images/placeholders/profile3.png" alt="Prva oseba in njen opis">
+                    </div>
+                    <div class="col-12 col-md-6 text-center text-md-start px-md-0">
+                        <img class="img-fluid" src="images/placeholders/profile4.png" alt="Prva oseba in njen opis">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<footer class="container-fluid bg-secondary text-light d-flex align-items-center py-5">
+    <div class="container">    
+        <div class="row">
+                <div class="footer-text">
+                    <p>O podjetju</p>
+                    <p>Ponujamo različne multimedijske storitve za podjetja in posameznike.</p>
+                </div>
+                <hr class="d-block d-md-none">
+                <div class="footer-text">
+                    <p>Pisarna</p>
+                    <p>Gasparijeva ulica 14,<br>1380 Cerknica, SI<br><br>
+                        <a href="tel:+38640418640" class="text-decoration-none text-reset">+386 40 418 640</a><br><br>
+                        <a href="mailto:info@near.si" class="text-decoration-none text-reset">info@near.si</a></p>
+                </div>
+                <hr class="d-block d-md-none">
+                <div class="footer-text">
+                    <p>Finančni podatki</p>
+                    <p>Trr: SI56 0284 3026 5890 566</p>
+                    <p>DŠ: 6761 4035</p>
+                </div>
+                <hr class="d-block d-md-none">
+                <div class="footer-text">
+                    <p>Sledite nam</p>
+                    <p>Pogled v zakulisje</p>
+                    <a href="#" target="_blank"><img src="images/placeholders/flatfish-2.png" alt="Facebook"></a>
+                    <a href="#" target="_blank"><img src="images/placeholders/light-2.png" alt="X"></a>
+                    <a href="#" target="_blank"><img src="images/placeholders/crab-16.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col text-start">
+                    <p>© 2025 Near. Vse pravice pridržane</p>
+                </div class="col">
+                <div class="col text-end">
+                    <p>S.P. Martin Nino Truden</p>
+                </div class="col">
+            </div>
+    </div>
+</footer>
+
+
     <!-- Bootstrap JS Bundle (includes Popper) -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
