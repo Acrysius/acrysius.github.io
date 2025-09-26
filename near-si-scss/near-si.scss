@@ -50,6 +50,18 @@
     @extend .text-md-start;
 };
 
+.section-color-white {
+    background-color: $white;
+};
+
+.section-color-teal {
+    background-color: #f9f9f9; 
+};
+
+.section-color-navbar {
+    background-color: #36363A;
+}
+
 /* Infinite-scrolling photo carousel */
 .photo-carousel {
     overflow: hidden;
