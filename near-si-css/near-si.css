@@ -1,4 +1,63 @@
 @charset "UTF-8";
+.scrolling-gallery {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  min-height: 180px;
+}
+
+.scrolling-track {
+  display: flex;
+  width: max-content;
+  animation: gallery-scroll 30s linear infinite;
+}
+
+.scrolling-gallery:hover .scrolling-track {
+  animation-play-state: paused;
+}
+
+.gallery-group {
+  display: flex;
+  gap: 2rem;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 160px;
+}
+
+@keyframes gallery-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.carousel-indicators [data-bs-target] {
+  background-color: #000;
+}
+
+.carousel-indicators .active {
+  background-color: #000;
+}
+
+.carousel-control-prev-icon {
+  background-image: none;
+  background-color: #000;
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23000" viewBox="0 0 16 16"><path d="M11.354 3.646a.5.5 0 0 1 0 .708L7.707 8l3.647 3.646a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0z"/></svg>');
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23000" viewBox="0 0 16 16"><path d="M11.354 3.646a.5.5 0 0 1 0 .708L7.707 8l3.647 3.646a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0z"/></svg>');
+}
+
+.carousel-control-next-icon {
+  background-image: none;
+  background-color: #000;
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23000" viewBox="0 0 16 16"><path d="M8.354 3.646a.5.5 0 0 0-.708.708L11.293 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4z"/></svg>');
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23000" viewBox="0 0 16 16"><path d="M8.354 3.646a.5.5 0 0 0-.708.708L11.293 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4z"/></svg>');
+}
+
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -848,7 +907,7 @@ progress {
   width: 16.66666667%;
 }
 
-.col-3, .services-image {
+.col-3 {
   flex: 0 0 auto;
   width: 25%;
 }
@@ -878,7 +937,7 @@ progress {
   width: 66.66666667%;
 }
 
-.col-9, .services-text {
+.col-9 {
   flex: 0 0 auto;
   width: 75%;
 }
@@ -893,7 +952,7 @@ progress {
   width: 91.66666667%;
 }
 
-.col-12, .footer-text {
+.col-12, .team-photos, .team-left, .team-right, .footer-text, .services-text {
   flex: 0 0 auto;
   width: 100%;
 }
@@ -1211,15 +1270,15 @@ progress {
     flex: 0 0 auto;
     width: 8.33333333%;
   }
-  .col-md-2, .services-image {
+  .col-md-2 {
     flex: 0 0 auto;
     width: 16.66666667%;
   }
-  .col-md-3, .footer-text {
+  .col-md-3, .footer-text, .services-text {
     flex: 0 0 auto;
     width: 25%;
   }
-  .col-md-4, .services-text {
+  .col-md-4 {
     flex: 0 0 auto;
     width: 33.33333333%;
   }
@@ -1227,7 +1286,7 @@ progress {
     flex: 0 0 auto;
     width: 41.66666667%;
   }
-  .col-md-6 {
+  .col-md-6, .team-photos, .team-left, .team-right {
     flex: 0 0 auto;
     width: 50%;
   }
@@ -2212,7 +2271,7 @@ progress {
   float: left !important;
 }
 
-.float-end {
+.float-end, .dropdown-sign {
   float: right !important;
 }
 
@@ -3162,7 +3221,7 @@ progress {
   padding-bottom: 1rem !important;
 }
 
-.py-4, .services-text, .services-image {
+.py-4, .services-text {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important;
 }
@@ -3428,11 +3487,11 @@ progress {
   text-align: right !important;
 }
 
-.text-center, .footer-text {
+.text-center, .team-photos, .team-left, .team-right, .footer-text {
   text-align: center !important;
 }
 
-.text-decoration-none {
+.text-decoration-none, .dropdown-sign, .dropdown-title {
   text-decoration: none !important;
 }
 
@@ -3556,7 +3615,7 @@ progress {
   color: var(--bs-emphasis-color) !important;
 }
 
-.text-reset {
+.text-reset, .dropdown-sign, .dropdown-title {
   --bs-text-opacity: 1;
   color: inherit !important;
 }
@@ -5072,7 +5131,7 @@ progress {
   .p-md-5 {
     padding: 3rem !important;
   }
-  .px-md-0 {
+  .px-md-0, .team-photos, .team-left, .team-right {
     padding-right: 0 !important;
     padding-left: 0 !important;
   }
@@ -5246,10 +5305,10 @@ progress {
   .column-gap-md-5 {
     column-gap: 3rem !important;
   }
-  .text-md-start, .footer-text {
+  .text-md-start, .team-left, .footer-text {
     text-align: left !important;
   }
-  .text-md-end {
+  .text-md-end, .team-right {
     text-align: right !important;
   }
   .text-md-center {
@@ -7021,6 +7080,9 @@ progress {
   100% {
     transform: translateX(-50%);
   }
+}
+.imagepad {
+  padding-bottom: 8px;
 }
 
 /*# sourceMappingURL=near-si.css.map */

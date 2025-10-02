@@ -1,3 +1,53 @@
+// Endless scrolling gallery styles
+.scrolling-gallery {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    min-height: 180px;
+}
+.scrolling-track {
+    display: flex;
+    width: max-content;
+    animation: gallery-scroll 30s linear infinite;
+}
+.scrolling-gallery:hover .scrolling-track {
+    animation-play-state: paused;
+}
+.gallery-group {
+    display: flex;
+    gap: 2rem;
+}
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 160px;
+}
+@keyframes gallery-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+// Custom carousel indicator color
+.carousel-indicators [data-bs-target] {
+    background-color: #000;
+}
+.carousel-indicators .active {
+    background-color: #000;
+}
+
+// Custom carousel control icon color
+.carousel-control-prev-icon {
+    background-image: none;
+    background-color: #000;
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23000" viewBox="0 0 16 16"><path d="M11.354 3.646a.5.5 0 0 1 0 .708L7.707 8l3.647 3.646a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0z"/></svg>');
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23000" viewBox="0 0 16 16"><path d="M11.354 3.646a.5.5 0 0 1 0 .708L7.707 8l3.647 3.646a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0z"/></svg>');
+}
+.carousel-control-next-icon {
+    background-image: none;
+    background-color: #000;
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23000" viewBox="0 0 16 16"><path d="M8.354 3.646a.5.5 0 0 0-.708.708L11.293 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4z"/></svg>');
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23000" viewBox="0 0 16 16"><path d="M8.354 3.646a.5.5 0 0 0-.708.708L11.293 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4z"/></svg>');
+}
 // Custom.scss
 // Option B: Include parts of Bootstrap
 
@@ -31,15 +81,11 @@
 @import "../node_modules/bootstrap/scss/utilities/api";
 
 // 8. Add additional custom code here
-.services-image {
-    @extend .col-3;
-    @extend .col-md-2;
-    @extend .py-4;
-};
+
 
 .services-text {
-    @extend .col-9;
-    @extend .col-md-4;
+    @extend .col-12;
+    @extend .col-md-3;
     @extend .py-4;
 };
 
@@ -120,3 +166,34 @@
     100% { transform: translateX(-50%); }
 }
 
+.dropdown-title {
+    @extend .text-decoration-none;
+    @extend .text-reset;
+}
+
+.dropdown-sign {
+    @extend .text-decoration-none;
+    @extend .text-reset;
+    @extend .float-end;
+}
+
+.imagepad {
+    padding-bottom: 8px;
+}
+
+.team-photos {
+    @extend .col-12;
+    @extend .col-md-6;
+    @extend .text-center;
+    @extend .px-md-0;
+}
+
+.team-right {
+    @extend .team-photos;
+    @extend .text-md-end;
+}
+
+.team-left {
+    @extend .team-photos;
+    @extend .text-md-start;
+}
