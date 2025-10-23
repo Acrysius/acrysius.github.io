@@ -111,17 +111,41 @@
             </div>
         </div>
     </div>
-
-    
+    <div class="d-flex align-items-center justify-content-center mt-2">
+        <button id="carousel-play-pause" class="btn btn-outline-secondary me-2" type="button" aria-label="Pause carousel">
+            <span id="carousel-play-pause-icon">❚❚</span>
+        </button>
+        <button class="carousel-control-prev" type="button" data-bs-target="#landing-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#landing-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 </div>
-<button class="carousel-control-prev" type="button" data-bs-target="#landing-carousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#landing-carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var carousel = document.querySelector('#landing-carousel');
+    var carouselInstance = bootstrap.Carousel.getOrCreateInstance(carousel);
+    var playPauseBtn = document.getElementById('carousel-play-pause');
+    var playPauseIcon = document.getElementById('carousel-play-pause-icon');
+    var isPlaying = true;
+    playPauseBtn.addEventListener('click', function() {
+        if (isPlaying) {
+            carouselInstance.pause();
+            playPauseIcon.textContent = '\u25B6'; // Play symbol
+            playPauseBtn.setAttribute('aria-label', 'Play carousel');
+        } else {
+            carouselInstance.cycle();
+            playPauseIcon.textContent = '\u275A\u275A'; // Pause symbol
+            playPauseBtn.setAttribute('aria-label', 'Pause carousel');
+        }
+        isPlaying = !isPlaying;
+    });
+});
+</script>
 <!--Partners section
 <div class="container-fluid bg-primary text-light d-flex align-items-center py-5">
     <div class="container">
