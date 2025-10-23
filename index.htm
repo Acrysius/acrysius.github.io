@@ -7,6 +7,7 @@
     <!-- Bootstrap CSS (vendor copy for GitHub Pages) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="near-si-css/near-si.css" rel="stylesheet">
+    <script src="near-si-js/near-si.js"></script>
     <style>
     /* Ensure links with .text-reset look identical to surrounding text in all states */
     /*a.text-reset, a.text-reset:visited {
@@ -177,30 +178,58 @@
                 <h2>Imate še vedno vprašanja?</h2>
             </div>
             <div class="col-12 col-md-8">
-                <a href="#near" data-bs-toggle="collapse" class="text-decoration-none text-reset">Near</a><a href="#near" data-bs-toggle="collapse" class="text-decoration-none text-reset float-end">+</a>
-
-
-                <div class="collapse" id="near">
-                <h3>Kdo smo?</h3>
-                <p>Če bi radi prišli v kontakt ali karkoli, potem si lahko izberete naslednje metode.</p>
+                <div id="faq-accordion">
+                <div class="collapse-row" data-bs-toggle="collapse" data-bs-target="#near" role="button" tabindex="0" aria-expanded="false" aria-controls="near" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;">
+                  <span class="text-decoration-none text-reset">Near</span>
+                  <span class="collapse-sign" data-target="#near">+</span>
+                </div>
+                <div class="collapse" id="near" data-bs-parent="#faq-accordion">
+                  <h3>Kdo smo?</h3>
+                  <p>Če bi radi prišli v kontakt ali karkoli, potem si lahko izberete naslednje metode.</p>
                 </div>
                 <hr>
-                <a href="#sestanek" data-bs-toggle="collapse" class="dropdown-title">Sestanek</a><a href="#sestanek" data-bs-toggle="collapse" class="dropdown-sign">+</a>
-                <div class="collapse" id="sestanek">
-                    <h3>Ujemanje skupnik ciljev</h3>
-                    <p>Tu noter pa se skriva vsebina ki je ne poznam. Bo že nekaj.</p>
+                <div class="collapse-row" data-bs-toggle="collapse" data-bs-target="#sestanek" role="button" tabindex="0" aria-expanded="false" aria-controls="sestanek" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;">
+                  <span class="dropdown-title">Sestanek</span>
+                  <span class="collapse-sign" data-target="#sestanek">+</span>
+                </div>
+                <div class="collapse" id="sestanek" data-bs-parent="#faq-accordion">
+                  <h3>Ujemanje skupnik ciljev</h3>
+                  <p>Tu noter pa se skriva vsebina ki je ne poznam. Bo že nekaj.</p>
                 </div>
                 <hr>
-                <a href="#razvoj" data-bs-toggle="collapse" class="dropdown-title">Razvoj</a><a href="#razvoj" data-bs-toggle="collapse" class="dropdown-sign">+</a>
-                <div class="collapse" id="razvoj">
-                    <p>Tu noter pa se skriva vsebina ki je ne poznam. Bo že nekaj.</p>
+                <div class="collapse-row" data-bs-toggle="collapse" data-bs-target="#razvoj" role="button" tabindex="0" aria-expanded="false" aria-controls="razvoj" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;">
+                  <span class="dropdown-title">Razvoj</span>
+                  <span class="collapse-sign" data-target="#razvoj">+</span>
+                </div>
+                <div class="collapse" id="razvoj" data-bs-parent="#faq-accordion">
+                  <p>Tu noter pa se skriva vsebina ki je ne poznam. Bo že nekaj.</p>
                 </div>
                 <hr>
-                <a href="#sodelovanje" data-bs-toggle="collapse" class="dropdown-title">Sodelovanje</a><a href="#sodelovanje" data-bs-toggle="collapse" class="dropdown-sign">+</a>
-                <div class="collapse" id="sodelovanje">
-                    <p>Tu noter pa se skriva vsebina ki je ne poznam. Bo že nekaj.</p>
+                <div class="collapse-row" data-bs-toggle="collapse" data-bs-target="#sodelovanje" role="button" tabindex="0" aria-expanded="false" aria-controls="sodelovanje" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;">
+                  <span class="dropdown-title">Sodelovanje</span>
+                  <span class="collapse-sign" data-target="#sodelovanje">+</span>
+                </div>
+                <div class="collapse" id="sodelovanje" data-bs-parent="#faq-accordion">
+                  <p>Tu noter pa se skriva vsebina ki je ne poznam. Bo že nekaj.</p>
                 </div>
                 <hr>
+            </div>
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var collapseElements = document.querySelectorAll('#faq-accordion .collapse');
+                collapseElements.forEach(function(collapseEl) {
+                    collapseEl.addEventListener('show.bs.collapse', function () {
+                        var sign = document.querySelector('.collapse-sign[data-target="#' + collapseEl.id + '"]');
+                        if(sign) sign.textContent = '-';
+                    });
+                    collapseEl.addEventListener('hide.bs.collapse', function () {
+                        var sign = document.querySelector('.collapse-sign[data-target="#' + collapseEl.id + '"]');
+                        if(sign) sign.textContent = '+';
+                    });
+                });
+            });
+            </script>
+            </div>
             </div>
         </div>
     </div>
