@@ -19,6 +19,7 @@
         outline: none;
     }*/
     </style>
+    <script src="near-si-js/near-si.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-light section-color-navbar text-light">
@@ -56,7 +57,7 @@
     </div>
 </nav>
 <!--Landing page-->
-<div id="landing-carousel" class="carousel slide carousel-fade container" data-bs-ride="carousel">
+<div id="landing-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#landing-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#landing-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -67,7 +68,7 @@
         
         <div class="carousel-item active">
             <div class="row section-color-teal p-5">
-                <div class="col-12 col-md-4 py-md-5">
+                <div class="col-12 col-md-4 p-md-5">
                     <h1 class="">Vse digitalne rešitve na enem mestu</h1>
                     <p>Oglejte si naš širok nabor storitev, ki jih ponujamo za posameznike in podjetja.</p>
                 </div>
@@ -78,7 +79,7 @@
         </div>
         <div class="carousel-item">
             <div class="row section-color-teal p-5">
-                <div class="col-12 col-md-4 py-md-5">
+                <div class="col-12 col-md-4 p-md-5">
                     <h1 class="">Pametno oblikovanje spodbuja interakcije</h1>
                     <p>Vključenost, privlačnost in preprostost poganja sodobne izdelke. Ohranite odlične izkušnje in jih spremenite v življensko zvestobo.</p>
                 </div>
@@ -89,7 +90,7 @@
         </div>
         <div class="carousel-item">
             <div class="row section-color-teal p-5">
-                <div class="col-12 col-md-4 py-md-5">
+                <div class="col-12 col-md-4 p-md-5">
                     <h1 class="">Do 3D oblačnih točk v le nekaj urah</h1>
                     <p>Natančne in zanesljive informacije brez obiska terena. Zagotavljamo varnejšo obliko vizualnih pregledov in meritev.</p>
                 </div>
@@ -100,7 +101,7 @@
         </div>
         <div class="carousel-item">
             <div class="row section-color-teal p-5">
-                <div class="col-12 col-md-4 py-md-5">
+                <div class="col-12 col-md-4 p-md-5">
                     <h1 class="">Dobra vizualna podoba odlikuje podjetja</h1>
                     <p>Izboljšajte trženje svoje blagovne znamke s promocijskimi in vizualnimi elementi.</p>
                 </div>
@@ -111,16 +112,16 @@
         </div>
     </div>
 
-    
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#landing-carousel" data-bs-slide="prev">
+<!--<button class="carousel-control-prev" type="button" data-bs-target="#landing-carousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#landing-carousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
-    </button>
+    </button>  -->
+</div>
+
 <!--Partners section
 <div class="container-fluid bg-primary text-light d-flex align-items-center py-5">
     <div class="container">
@@ -235,19 +236,23 @@
                 <p>Inovativne rešitve, ki ustrezajo vašim željam in potrebam.</p>
             </div>
             <div class="col-12 col-md-8">
-                <div class="row">
-                    <div class="team-right">
-                        <img class="img-fluid" src="images/placeholders/figma-placeholders/f1.png" alt="Prva oseba in njen opis">
+                <div class="team-carousel-wrapper position-relative" style="overflow:hidden; max-width:900px; margin:auto;">
+                  <button class="team-carousel-btn prev" aria-label="Previous" style="position:absolute;left:0;top:50%;transform:translateY(-50%);z-index:2;">&#8592;</button>
+                  <div class="team-carousel-track d-flex" style="transition: transform 0.5s;">
+                    <div class="team-carousel-item p-2 flex-shrink-0">
+                      <img class="img-fluid" src="images/placeholders/figma-placeholders/f1.png" alt="Prva oseba in njen opis">
                     </div>
-                    <div class="team-left">
-                        <img class="img-fluid" src="images/placeholders/figma-placeholders/f2.png" alt="Prva oseba in njen opis">
+                    <div class="team-carousel-item p-2 flex-shrink-0">
+                      <img class="img-fluid" src="images/placeholders/figma-placeholders/f2.png" alt="Druga oseba in njen opis">
                     </div>
-                    <div class="team-right">
-                        <img class="img-fluid" src="images/placeholders/figma-placeholders/f3.png" alt="Prva oseba in njen opis">
+                    <div class="team-carousel-item p-2 flex-shrink-0">
+                      <img class="img-fluid" src="images/placeholders/figma-placeholders/f3.png" alt="Tretja oseba in njen opis">
                     </div>
-                    <div class="team-left">
-                        <img class="img-fluid" src="images/placeholders/figma-placeholders/f4.png" alt="Prva oseba in njen opis">
+                    <div class="team-carousel-item p-2 flex-shrink-0">
+                      <img class="img-fluid" src="images/placeholders/figma-placeholders/f4.png" alt="Četrta oseba in njen opis">
                     </div>
+                  </div>
+                  <button class="team-carousel-btn next" aria-label="Next" style="position:absolute;right:0;top:50%;transform:translateY(-50%);z-index:2;">&#8594;</button>
                 </div>
             </div>
         </div>
