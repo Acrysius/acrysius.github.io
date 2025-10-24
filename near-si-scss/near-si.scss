@@ -182,7 +182,7 @@
 }
 
 .imagepad {
-    padding-bottom: 8px;
+    padding-bottom: 12px;
 }
 
 .team-photos {
@@ -210,4 +210,14 @@
     .right-border {
         border-right: none;
     }
+/* Show 3 images at a time on desktop, 1 on mobile */
+.team-carousel-item {
+  width: 33.33%;
+}
+
+@media (max-width: 767.98px) {
+  .team-carousel-item {
+    width: 100%;
+    justify-content: center !important;
+  }
 }
