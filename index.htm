@@ -57,13 +57,10 @@
     </div>
 </nav>
 <!--Landing page-->
-<div id="landing-carousel" class="carousel slide carousel-fade container" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#landing-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#landing-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#landing-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#landing-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-    </div>
+<div id="landing-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    
+    
+    
     <div class="carousel-inner">
         
         <div class="carousel-item active">
@@ -111,41 +108,28 @@
             </div>
         </div>
     </div>
-    <div class="d-flex align-items-center justify-content-center mt-2">
-        <button id="carousel-play-pause" class="btn btn-outline-secondary me-2" type="button" aria-label="Pause carousel">
-            <span id="carousel-play-pause-icon">❚❚</span>
-        </button>
-        <button class="carousel-control-prev" type="button" data-bs-target="#landing-carousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#landing-carousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+        
+</div>    
+<div class="carousel-controls-row d-flex align-items-center justify-content-center gap-3 mt-4">
+    <button id="carousel-play-pause" class="btn px-2 py-1 d-flex align-items-center justify-content-center" aria-label="Play/Pause">
+        <span id="carousel-play-icon">&#9654;</span>
+        <span id="carousel-pause-icon" style="display:none;">&#10073;&#10073;</span>
+    </button>
+    <button class="carousel-arrow btn px-2 py-1" type="button" data-bs-target="#landing-carousel" data-bs-slide="prev" aria-label="Previous">
+        <span aria-hidden="true">&lt;</span>
+    </button>
+    <div class="d-inline-flex gap-2 align-items-center mb-0">
+        <button class="btn" type="button" data-bs-target="#landing-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">o</button>
+        <button class="btn" type="button" data-bs-target="#landing-carousel" data-bs-slide-to="1" aria-label="Slide 2">o</button>
+        <button class="btn" type="button" data-bs-target="#landing-carousel" data-bs-slide-to="2" aria-label="Slide 3">o</button>
+        <button class="btn" type="button" data-bs-target="#landing-carousel" data-bs-slide-to="3" aria-label="Slide 4">o</button>
     </div>
+    
+    <button class="carousel-arrow btn px-2 py-1" type="button" data-bs-target="#landing-carousel" data-bs-slide="next" aria-label="Next">
+        <span aria-hidden="true">></span>
+    </button>
 </div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var carousel = document.querySelector('#landing-carousel');
-    var carouselInstance = bootstrap.Carousel.getOrCreateInstance(carousel);
-    var playPauseBtn = document.getElementById('carousel-play-pause');
-    var playPauseIcon = document.getElementById('carousel-play-pause-icon');
-    var isPlaying = true;
-    playPauseBtn.addEventListener('click', function() {
-        if (isPlaying) {
-            carouselInstance.pause();
-            playPauseIcon.textContent = '\u25B6'; // Play symbol
-            playPauseBtn.setAttribute('aria-label', 'Play carousel');
-        } else {
-            carouselInstance.cycle();
-            playPauseIcon.textContent = '\u275A\u275A'; // Pause symbol
-            playPauseBtn.setAttribute('aria-label', 'Pause carousel');
-        }
-        isPlaying = !isPlaying;
-    });
-});
-</script>
+
 <!--Partners section
 <div class="container-fluid bg-primary text-light d-flex align-items-center py-5">
     <div class="container">
@@ -166,19 +150,18 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--Services section-->
 <div id="services" class="container-fluid section-color-white d-flex align-items-center py-5">
     <div class="container">
-        <h2 class="">Storitve, ki jih ponujamo za posameznike in podjetja</h2>
         <div class="row">
-            <div class="services-text">
+            <div class="services-text right-border">
                 <h3>Fotografija</h3>
                 <p>Podoba</p>
                 <p>Izboljšajte trženje svoje blagovne znamke s promocijskimi in vizualnimi elementi.<p>
             </div>
-            <div class="services-text">
+            <div class="services-text right-border">
                 <h3>Produkcija</h3>
                 <p>Video</p>
                 <p>Poudarite svoj ugled in vpliv, saj je natančnost ter učinkovitost vrlina vsakega podjetja.</p>
             </div>
-            <div class="services-text">
+            <div class="services-text right-border">
                 <h3>Splet</h3>
                 <p>UX | UI</p>
                 <p>Vizualne podrobnosti, ki učinkovito predstacijo vašo podobo in spodbujajo interakcije s strankami.</p>
@@ -326,6 +309,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     <a href="tel:+38640418640" class="text-decoration-none text-reset">+386 40 418 640</a><br><br>
                     <a href="mailto:info@near.si" class="text-decoration-none text-reset">info@near.si</a></p>
                     <p>Več: <a href="https://www.ajpes.si/" class="text-decoration-none text-reset">AJPES</a></p>
+                </div>
+                <hr class="d-block d-md-none">
+                <div class="footer-text">
+                    <img src="images/placeholders/figma-placeholders/foot1.png" alt=""><br>
+                    <img src="images/placeholders/figma-placeholders/foot2.png" alt="">
                 </div>
                 <!--<div class="footer-text">
                     <p>Finančni podatki</p>

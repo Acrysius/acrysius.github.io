@@ -86,7 +86,7 @@
 .services-text {
     @extend .col-12;
     @extend .col-md-3;
-    @extend .py-4;
+    @extend .p-4;
 };
 
 .footer-text {
@@ -94,6 +94,10 @@
     @extend .col-md-3;
     @extend .text-center;
     @extend .text-md-start;
+};
+
+.footer-text img {
+    @extend .p-2;
 };
 
 .section-color-white {
@@ -196,4 +200,14 @@
 .team-left {
     @extend .team-photos;
     @extend .text-md-start;
+}
+
+.right-border {
+    border-right: 2px solid #36363A;
+}
+
+@media (max-width: 767px) {
+    .right-border {
+        border-right: none;
+    }
 }
