@@ -3155,7 +3155,7 @@ progress {
   padding: 0.25rem !important;
 }
 
-.p-2 {
+.p-2, .footer-text img {
   padding: 0.5rem !important;
 }
 
@@ -3163,7 +3163,7 @@ progress {
   padding: 1rem !important;
 }
 
-.p-4 {
+.p-4, .services-text {
   padding: 1.5rem !important;
 }
 
@@ -3221,7 +3221,7 @@ progress {
   padding-bottom: 1rem !important;
 }
 
-.py-4, .services-text {
+.py-4 {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important;
 }
@@ -7094,6 +7094,16 @@ progress {
   .team-carousel-item {
     width: 100%;
     justify-content: center !important;
+  }
+}
+
+.right-border {
+  border-right: 2px solid #36363A;
+}
+
+@media (max-width: 767px) {
+  .right-border {
+    border-right: none;
   }
 }
 

@@ -7,6 +7,7 @@
     <!-- Bootstrap CSS (vendor copy for GitHub Pages) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="near-si-css/near-si.css" rel="stylesheet">
+    <script src="near-si-js/near-si.js"></script>
     <style>
     /* Ensure links with .text-reset look identical to surrounding text in all states */
     /*a.text-reset, a.text-reset:visited {
@@ -58,12 +59,9 @@
 </nav>
 <!--Landing page-->
 <div id="landing-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#landing-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#landing-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#landing-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#landing-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-    </div>
+    
+    
+    
     <div class="carousel-inner">
         
         <div class="carousel-item active">
@@ -111,15 +109,26 @@
             </div>
         </div>
     </div>
-
-<!--<button class="carousel-control-prev" type="button" data-bs-target="#landing-carousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+        
+</div>    
+<div class="carousel-controls-row d-flex align-items-center justify-content-center gap-3 mt-4">
+    <button id="carousel-play-pause" class="btn px-2 py-1 d-flex align-items-center justify-content-center" aria-label="Play/Pause">
+        <span id="carousel-play-icon">&#9654;</span>
+        <span id="carousel-pause-icon" style="display:none;">&#10073;&#10073;</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#landing-carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>  -->
+    <button class="carousel-arrow btn px-2 py-1" type="button" data-bs-target="#landing-carousel" data-bs-slide="prev" aria-label="Previous">
+        <span aria-hidden="true">&lt;</span>
+    </button>
+    <div class="d-inline-flex gap-2 align-items-center mb-0">
+        <button class="btn" type="button" data-bs-target="#landing-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">o</button>
+        <button class="btn" type="button" data-bs-target="#landing-carousel" data-bs-slide-to="1" aria-label="Slide 2">o</button>
+        <button class="btn" type="button" data-bs-target="#landing-carousel" data-bs-slide-to="2" aria-label="Slide 3">o</button>
+        <button class="btn" type="button" data-bs-target="#landing-carousel" data-bs-slide-to="3" aria-label="Slide 4">o</button>
+    </div>
+    
+    <button class="carousel-arrow btn px-2 py-1" type="button" data-bs-target="#landing-carousel" data-bs-slide="next" aria-label="Next">
+        <span aria-hidden="true">></span>
+    </button>
 </div>
 
 <!--Partners section
@@ -142,19 +151,18 @@
 <!--Services section-->
 <div id="services" class="container-fluid section-color-white d-flex align-items-center py-5">
     <div class="container">
-        <h2 class="">Storitve, ki jih ponujamo za posameznike in podjetja</h2>
         <div class="row">
-            <div class="services-text">
+            <div class="services-text right-border">
                 <h3>Fotografija</h3>
                 <p>Podoba</p>
                 <p>Izboljšajte trženje svoje blagovne znamke s promocijskimi in vizualnimi elementi.<p>
             </div>
-            <div class="services-text">
+            <div class="services-text right-border">
                 <h3>Produkcija</h3>
                 <p>Video</p>
                 <p>Poudarite svoj ugled in vpliv, saj je natančnost ter učinkovitost vrlina vsakega podjetja.</p>
             </div>
-            <div class="services-text">
+            <div class="services-text right-border">
                 <h3>Splet</h3>
                 <p>UX | UI</p>
                 <p>Vizualne podrobnosti, ki učinkovito predstacijo vašo podobo in spodbujajo interakcije s strankami.</p>
@@ -178,30 +186,58 @@
                 <h2>Imate še vedno vprašanja?</h2>
             </div>
             <div class="col-12 col-md-8">
-                <a href="#near" data-bs-toggle="collapse" class="text-decoration-none text-reset">Near</a><a href="#near" data-bs-toggle="collapse" class="text-decoration-none text-reset float-end">+</a>
-
-
-                <div class="collapse" id="near">
-                <h3>Kdo smo?</h3>
-                <p>Če bi radi prišli v kontakt ali karkoli, potem si lahko izberete naslednje metode.</p>
+                <div id="faq-accordion">
+                <div class="collapse-row" data-bs-toggle="collapse" data-bs-target="#near" role="button" tabindex="0" aria-expanded="false" aria-controls="near" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;">
+                  <span class="text-decoration-none text-reset">Near</span>
+                  <span class="collapse-sign" data-target="#near">+</span>
+                </div>
+                <div class="collapse" id="near" data-bs-parent="#faq-accordion">
+                  <h3>Kdo smo?</h3>
+                  <p>Če bi radi prišli v kontakt ali karkoli, potem si lahko izberete naslednje metode.</p>
                 </div>
                 <hr>
-                <a href="#sestanek" data-bs-toggle="collapse" class="dropdown-title">Sestanek</a><a href="#sestanek" data-bs-toggle="collapse" class="dropdown-sign">+</a>
-                <div class="collapse" id="sestanek">
-                    <h3>Ujemanje skupnik ciljev</h3>
-                    <p>Tu noter pa se skriva vsebina ki je ne poznam. Bo že nekaj.</p>
+                <div class="collapse-row" data-bs-toggle="collapse" data-bs-target="#sestanek" role="button" tabindex="0" aria-expanded="false" aria-controls="sestanek" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;">
+                  <span class="dropdown-title">Sestanek</span>
+                  <span class="collapse-sign" data-target="#sestanek">+</span>
+                </div>
+                <div class="collapse" id="sestanek" data-bs-parent="#faq-accordion">
+                  <h3>Ujemanje skupnik ciljev</h3>
+                  <p>Tu noter pa se skriva vsebina ki je ne poznam. Bo že nekaj.</p>
                 </div>
                 <hr>
-                <a href="#razvoj" data-bs-toggle="collapse" class="dropdown-title">Razvoj</a><a href="#razvoj" data-bs-toggle="collapse" class="dropdown-sign">+</a>
-                <div class="collapse" id="razvoj">
-                    <p>Tu noter pa se skriva vsebina ki je ne poznam. Bo že nekaj.</p>
+                <div class="collapse-row" data-bs-toggle="collapse" data-bs-target="#razvoj" role="button" tabindex="0" aria-expanded="false" aria-controls="razvoj" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;">
+                  <span class="dropdown-title">Razvoj</span>
+                  <span class="collapse-sign" data-target="#razvoj">+</span>
+                </div>
+                <div class="collapse" id="razvoj" data-bs-parent="#faq-accordion">
+                  <p>Tu noter pa se skriva vsebina ki je ne poznam. Bo že nekaj.</p>
                 </div>
                 <hr>
-                <a href="#sodelovanje" data-bs-toggle="collapse" class="dropdown-title">Sodelovanje</a><a href="#sodelovanje" data-bs-toggle="collapse" class="dropdown-sign">+</a>
-                <div class="collapse" id="sodelovanje">
-                    <p>Tu noter pa se skriva vsebina ki je ne poznam. Bo že nekaj.</p>
+                <div class="collapse-row" data-bs-toggle="collapse" data-bs-target="#sodelovanje" role="button" tabindex="0" aria-expanded="false" aria-controls="sodelovanje" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;">
+                  <span class="dropdown-title">Sodelovanje</span>
+                  <span class="collapse-sign" data-target="#sodelovanje">+</span>
+                </div>
+                <div class="collapse" id="sodelovanje" data-bs-parent="#faq-accordion">
+                  <p>Tu noter pa se skriva vsebina ki je ne poznam. Bo že nekaj.</p>
                 </div>
                 <hr>
+            </div>
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var collapseElements = document.querySelectorAll('#faq-accordion .collapse');
+                collapseElements.forEach(function(collapseEl) {
+                    collapseEl.addEventListener('show.bs.collapse', function () {
+                        var sign = document.querySelector('.collapse-sign[data-target="#' + collapseEl.id + '"]');
+                        if(sign) sign.textContent = '-';
+                    });
+                    collapseEl.addEventListener('hide.bs.collapse', function () {
+                        var sign = document.querySelector('.collapse-sign[data-target="#' + collapseEl.id + '"]');
+                        if(sign) sign.textContent = '+';
+                    });
+                });
+            });
+            </script>
+            </div>
             </div>
         </div>
     </div>
@@ -278,6 +314,11 @@
                     <a href="tel:+38640418640" class="text-decoration-none text-reset">+386 40 418 640</a><br><br>
                     <a href="mailto:info@near.si" class="text-decoration-none text-reset">info@near.si</a></p>
                     <p>Več: <a href="https://www.ajpes.si/" class="text-decoration-none text-reset">AJPES</a></p>
+                </div>
+                <hr class="d-block d-md-none">
+                <div class="footer-text">
+                    <img src="images/placeholders/figma-placeholders/foot1.png" alt=""><br>
+                    <img src="images/placeholders/figma-placeholders/foot2.png" alt="">
                 </div>
                 <!--<div class="footer-text">
                     <p>Finančni podatki</p>
