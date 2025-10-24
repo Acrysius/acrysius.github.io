@@ -19,6 +19,7 @@
         outline: none;
     }*/
     </style>
+    <script src="near-si-js/near-si.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-light section-color-navbar text-light">
@@ -235,19 +236,23 @@
                 <p>Inovativne rešitve, ki ustrezajo vašim željam in potrebam.</p>
             </div>
             <div class="col-12 col-md-8">
-                <div class="row">
-                    <div class="team-right">
-                        <img class="img-fluid" src="images/placeholders/figma-placeholders/f1.png" alt="Prva oseba in njen opis">
+                <div class="team-carousel-wrapper position-relative" style="overflow:hidden; max-width:900px; margin:auto;">
+                  <button class="team-carousel-btn prev" aria-label="Previous" style="position:absolute;left:0;top:50%;transform:translateY(-50%);z-index:2;">&#8592;</button>
+                  <div class="team-carousel-track d-flex" style="transition: transform 0.5s;">
+                    <div class="team-carousel-item p-2 flex-shrink-0">
+                      <img class="img-fluid" src="images/placeholders/figma-placeholders/f1.png" alt="Prva oseba in njen opis">
                     </div>
-                    <div class="team-left">
-                        <img class="img-fluid" src="images/placeholders/figma-placeholders/f2.png" alt="Prva oseba in njen opis">
+                    <div class="team-carousel-item p-2 flex-shrink-0">
+                      <img class="img-fluid" src="images/placeholders/figma-placeholders/f2.png" alt="Druga oseba in njen opis">
                     </div>
-                    <div class="team-right">
-                        <img class="img-fluid" src="images/placeholders/figma-placeholders/f3.png" alt="Prva oseba in njen opis">
+                    <div class="team-carousel-item p-2 flex-shrink-0">
+                      <img class="img-fluid" src="images/placeholders/figma-placeholders/f3.png" alt="Tretja oseba in njen opis">
                     </div>
-                    <div class="team-left">
-                        <img class="img-fluid" src="images/placeholders/figma-placeholders/f4.png" alt="Prva oseba in njen opis">
+                    <div class="team-carousel-item p-2 flex-shrink-0">
+                      <img class="img-fluid" src="images/placeholders/figma-placeholders/f4.png" alt="Četrta oseba in njen opis">
                     </div>
+                  </div>
+                  <button class="team-carousel-btn next" aria-label="Next" style="position:absolute;right:0;top:50%;transform:translateY(-50%);z-index:2;">&#8594;</button>
                 </div>
             </div>
         </div>
