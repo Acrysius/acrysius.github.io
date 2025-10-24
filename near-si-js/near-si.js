@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Start with autoplay enabled
     updatePlayPauseIcons();
-document.addEventListener('DOMContentLoaded', function() {
+
   const track = document.querySelector('.team-carousel-track');
   const items = document.querySelectorAll('.team-carousel-item');
   const prevBtn = document.querySelector('.team-carousel-btn.prev');
