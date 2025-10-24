@@ -7085,6 +7085,15 @@ progress {
   padding-bottom: 12px;
 }
 
+.right-border {
+  border-right: 2px solid #36363A;
+}
+
+@media (max-width: 767px) {
+  .right-border {
+    border-right: none;
+  }
+}
 /* Show 3 images at a time on desktop, 1 on mobile */
 .team-carousel-item {
   width: 33.33%;
@@ -7094,16 +7103,6 @@ progress {
   .team-carousel-item {
     width: 100%;
     justify-content: center !important;
-  }
-}
-
-.right-border {
-  border-right: 2px solid #36363A;
-}
-
-@media (max-width: 767px) {
-  .right-border {
-    border-right: none;
   }
 }
 
