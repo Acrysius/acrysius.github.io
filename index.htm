@@ -8,6 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="near-si-css/near-si.css" rel="stylesheet">
     <script src="near-si-js/near-si.js"></script>
+    <link rel="icon" type="image/svg+xml" href="images/near-logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
     /* Ensure links with .text-reset look identical to surrounding text in all states */
     /*a.text-reset, a.text-reset:visited {
@@ -23,42 +27,48 @@
     <script src="near-si-js/near-si.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-light section-color-navbar text-light">
+<nav class="navbar navbar-light section-color-navbar text-light fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="/">Near</a>
-        
-        <!-- Language switcher always visible -->
+        <img src="images/near-logo.svg" alt="Logotip Near.si, ki označuje dva povezana, zaobljena kvadratka." width="24" height="24">
+        <a class="navbar-brand nav-text poppins-medium" href="/">Near</a>
         <div class="d-flex align-items-center">
             <ul class="list-inline mb-0 me-3">
                 <li class="list-inline-item"><a href="index.htm" class="text-decoration-none">SI</a></li>
                 <li class="list-inline-item" aria-current="page">EN</li>
             </ul>
-            
-            <!-- Dropdown toggle button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- Offcanvas toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNavbarOffcanvas" aria-controls="mainNavbarOffcanvas" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
-
-        <!-- Collapsible navigation menu -->
-        <div class="collapse navbar-collapse row" id="mainNavbar">
-            <ul class="navbar-nav w-100 mt-2 col">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="index-en.htm">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="portfolio-en.htm">Portfolio</a></li>
-            </ul>
-            <div class="navbar-nav w-100 mt-2 col d-flex justify-content-end">
-                <p class="mb-0 text-end">Gasparijeva ulica 14,<br>1380 Cerknica, Slovenia<br><br>
-                <a href="tel:+38640418640" class="text-decoration-none text-reset">+386 40 418 640</a><br><br>
-                <a href="mailto:info@near.si" class="text-decoration-none text-reset">info@near-group.si</a></p>
-            </div>
-        </div>
-        
     </div>
 </nav>
+
+<!-- Offcanvas navigation menu -->
+<div class="offcanvas offcanvas-top" tabindex="-1" id="mainNavbarOffcanvas" aria-labelledby="mainNavbarOffcanvasLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="mainNavbarOffcanvasLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="navbar-nav w-100 mt-2">
+            <li class="nav-item nav-text"><a class="nav-link active" aria-current="page" href="index-en.htm">Home</a></li>
+            <li class="nav-item nav-text"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item nav-text"><a class="nav-link" href="#about">About Us</a></li>
+            <li class="nav-item nav-text"><a class="nav-link" href="portfolio-en.htm">Portfolio</a></li>
+        </ul>
+        <div class="mt-4 text-end">
+            <p class="mb-0">Gasparijeva ulica 14,<br>1380 Cerknica, Slovenia<br><br>
+            <a href="tel:+38640418640" class="text-decoration-none text-reset">+386 40 418 640</a><br><br>
+            <a href="mailto:info@near.si" class="text-decoration-none text-reset">info@near-group.si</a></p>
+        </div>
+    </div>
+</div>
+
+    
+
 <!--Landing page-->
-<div id="landing-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<section id="landing-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
     
     
     
@@ -110,7 +120,7 @@
         </div>
     </div>
         
-</div>    
+</section>    
 <div class="carousel-controls-row d-flex align-items-center justify-content-center gap-3 mt-4">
     <button id="carousel-play-pause" class="btn px-2 py-1 d-flex align-items-center justify-content-center" aria-label="Play/Pause">
         <span id="carousel-play-icon">&#9654;</span>
@@ -149,99 +159,87 @@
     </div>
 </div>-->
 <!--Services section-->
-<div id="services" class="container-fluid section-color-white d-flex align-items-center py-5">
+<section id="services" class="container-fluid section-color-white d-flex align-items-center py-5">
     <div class="container">
         <div class="row">
             <div class="services-text right-border">
-                <h3>Fotografija</h3>
-                <p>Podoba</p>
-                <p>Izboljšajte trženje svoje blagovne znamke s promocijskimi in vizualnimi elementi.<p>
+                <h2>Fotografija</h2>
+                <h3>Podoba</h3>
+                <p>Predstavite svojo idejo s kreativno promocijo in vizualnimi elementi, ki navdušujejo na prvi pogled.<p>
             </div>
             <div class="services-text right-border">
-                <h3>Produkcija</h3>
-                <p>Video</p>
-                <p>Poudarite svoj ugled in vpliv, saj je natančnost ter učinkovitost vrlina vsakega podjetja.</p>
+                <h2>Produkcija</h2>
+                <h3>Video</h3>
+                <p>Premišljeno vizualno pripovedovanje zagotavlja prepoznavnost in trajen vtis.</p>
             </div>
             <div class="services-text right-border">
-                <h3>Splet</h3>
-                <p>UX | UI</p>
-                <p>Vizualne podrobnosti, ki učinkovito predstacijo vašo podobo in spodbujajo interakcije s strankami.</p>
+                <h2>Splet</h2>
+                <h3>UX | UI</h3>
+                <p>Odlična digitalna prisotnost si zasluži več kot le videz, potrebuje logiko, tok in čustva.</p>
             </div>
             <div class="services-text">
-                <h3>Digitalizacija</h3>
-                <p>Resničnost</p>
-                <p>Ujemite nepozabne trenutke z osupljivimi potreti, ki ohranjajo vaša edinstvena doživetja in krepijo povezave.</p>
+                <h2>Digitalizacija</h2>
+                <h3>Resničnost</h3>
+                <p>Oblikujemo prihodnost z opazovanjem, ustvarjanjem in povezovanjem.</p>
             </div>
         </div>
 
             
 
     </div>
-</div>
+</section>
 <!--Questions-->
-<div class="container-fluid section-color-teal d-flex align-items-center py-5">
+<section class="container-fluid section-color-teal d-flex align-items-center py-5">
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-4">
-                <h2>Imate še vedno vprašanja?</h2>
+                <h1>Imate še vedno vprašanja?</h1>
             </div>
             <div class="col-12 col-md-8">
                 <div id="faq-accordion">
                 <div class="collapse-row" data-bs-toggle="collapse" data-bs-target="#near" role="button" tabindex="0" aria-expanded="false" aria-controls="near" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;">
-                  <span class="text-decoration-none text-reset">Near</span>
+                  <span class="dropdown-item">Near</span>
                   <span class="collapse-sign" data-target="#near">+</span>
                 </div>
-                <div class="collapse" id="near" data-bs-parent="#faq-accordion">
-                  <h3>Kdo smo?</h3>
-                  <p>Če bi radi prišli v kontakt ali karkoli, potem si lahko izberete naslednje metode.</p>
+                <div class="collapse pb-1" id="near" data-bs-parent="#faq-accordion">
+                  <h3 class="collapse-title">Kdo smo?</h3>
+                  <p class="collapse-title">Smo mlado podjetje, ki ponuja različne multimedijske storitve ter je specializirano za razvoj in izvedbo celovitih digitalnih rešitev. Z uporabo naprednih tehnologij in strokovnega znanja zagotavljamo visokokakovostne storitve na področju video produkcije, grafičnega oblikovanja, spletnih rešitev in digitalizacije resničnosti.</p>
                 </div>
                 <hr>
                 <div class="collapse-row" data-bs-toggle="collapse" data-bs-target="#sestanek" role="button" tabindex="0" aria-expanded="false" aria-controls="sestanek" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;">
-                  <span class="dropdown-title">Sestanek</span>
+                  <span class="dropdown-title dropdown-item">Sestanek</span>
                   <span class="collapse-sign" data-target="#sestanek">+</span>
                 </div>
-                <div class="collapse" id="sestanek" data-bs-parent="#faq-accordion">
-                  <h3>Ujemanje skupnik ciljev</h3>
-                  <p>Tu noter pa se skriva vsebina ki je ne poznam. Bo že nekaj.</p>
+                <div class="collapse pb-1" id="sestanek" data-bs-parent="#faq-accordion">
+                  <h3 class="collapse-title">Poslovni dialogi</h3>
+                  <p class="collapse-title">Vzpostavljanje osebnega stika je temelj uspešnega in dolgoročnega poslovnega sodelovanja. Zato v našem podjetju stremimo k jasni komunikaciji, razumevanju potreb, vrednot in skupnih ciljev. Osebno spoznavanje spodbuja ustvarjanje novih poslovnih priložnosti.</p>
                 </div>
                 <hr>
                 <div class="collapse-row" data-bs-toggle="collapse" data-bs-target="#razvoj" role="button" tabindex="0" aria-expanded="false" aria-controls="razvoj" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;">
-                  <span class="dropdown-title">Razvoj</span>
+                  <span class="dropdown-title dropdown-item">Razvoj</span>
                   <span class="collapse-sign" data-target="#razvoj">+</span>
                 </div>
-                <div class="collapse" id="razvoj" data-bs-parent="#faq-accordion">
-                  <p>Tu noter pa se skriva vsebina ki je ne poznam. Bo že nekaj.</p>
+                <div class="collapse pb-1" id="razvoj" data-bs-parent="#faq-accordion">
+                    <h3 class="collapse-title">Od ideje do produkta</h3>
+                    <p class="collapse-title">Vsak velik projekt se začne z idejo – ali izzivom. V našem podjetju ideje pretvarjamo v rešitve. S strokovnim pristopom, analizo potreb in natančnim načrtovanjem razvijamo projekte po meri naročnika. Od prvega koraka do končne izvedbe ustvarjamo inovacije, ki premikajo meje mogočega.</p>
                 </div>
                 <hr>
                 <div class="collapse-row" data-bs-toggle="collapse" data-bs-target="#sodelovanje" role="button" tabindex="0" aria-expanded="false" aria-controls="sodelovanje" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;">
-                  <span class="dropdown-title">Sodelovanje</span>
+                  <span class="dropdown-title dropdown-item">Sodelovanje</span>
                   <span class="collapse-sign" data-target="#sodelovanje">+</span>
                 </div>
-                <div class="collapse" id="sodelovanje" data-bs-parent="#faq-accordion">
-                  <p>Tu noter pa se skriva vsebina ki je ne poznam. Bo že nekaj.</p>
+                <div class="collapse pb-1" id="sodelovanje" data-bs-parent="#faq-accordion">
+                    <h3 class="collapse-title">Gradimo priložnosti</h3>
+                    <p class="collapse-title">Cilj našega podjetja je dolgoročno poslovno sodelovanje, saj skupaj rastemo, ustvarjamo nove neraziskane priložnosti in premikamo meje možnega. Odprta komunikacija in dodajanje novih vrednosti krepi odnose za večji uspeh in učinek.</p>
                 </div>
                 <hr>
             </div>
-            <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var collapseElements = document.querySelectorAll('#faq-accordion .collapse');
-                collapseElements.forEach(function(collapseEl) {
-                    collapseEl.addEventListener('show.bs.collapse', function () {
-                        var sign = document.querySelector('.collapse-sign[data-target="#' + collapseEl.id + '"]');
-                        if(sign) sign.textContent = '-';
-                    });
-                    collapseEl.addEventListener('hide.bs.collapse', function () {
-                        var sign = document.querySelector('.collapse-sign[data-target="#' + collapseEl.id + '"]');
-                        if(sign) sign.textContent = '+';
-                    });
-                });
-            });
-            </script>
+
             </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 <!--Proper photo gallery-->
 <div class="scrolling-gallery mb-5" aria-label="Endless scrolling gallery">
     <h1 class="my-5 text-center">Možnosti se začnejo tukaj. Naj Ideje dobijo pomen</h1>
@@ -259,6 +257,18 @@
             <div class="gallery-item"><img src="images/placeholders/figma-placeholders/g4.png" alt="Slika 1"></div>
             <div class="gallery-item"><img class="imagepad" src="images/placeholders/figma-placeholders/g5.png" alt="Slika 2"><br><img src="images/placeholders/figma-placeholders/g6.png" alt="Slika 3"></div>
         </div>
+        <div class="gallery-group">
+            <div class="gallery-item"><img src="images/placeholders/figma-placeholders/g1.png" alt="Slika 1"></div>
+            <div class="gallery-item"><img class="imagepad" src="images/placeholders/figma-placeholders/g2.png" alt="Slika 2"><br><img src="images/placeholders/figma-placeholders/g3.png" alt="Slika 3"></div>
+            <div class="gallery-item"><img src="images/placeholders/figma-placeholders/g4.png" alt="Slika 1"></div>
+            <div class="gallery-item"><img class="imagepad" src="images/placeholders/figma-placeholders/g5.png" alt="Slika 2"><br><img src="images/placeholders/figma-placeholders/g6.png" alt="Slika 3"></div>
+        </div>
+        <div class="gallery-group">
+            <div class="gallery-item"><img src="images/placeholders/figma-placeholders/g1.png" alt="Slika 1"></div>
+            <div class="gallery-item"><img class="imagepad" src="images/placeholders/figma-placeholders/g2.png" alt="Slika 2"><br><img src="images/placeholders/figma-placeholders/g3.png" alt="Slika 3"></div>
+            <div class="gallery-item"><img src="images/placeholders/figma-placeholders/g4.png" alt="Slika 1"></div>
+            <div class="gallery-item"><img class="imagepad" src="images/placeholders/figma-placeholders/g5.png" alt="Slika 2"><br><img src="images/placeholders/figma-placeholders/g6.png" alt="Slika 3"></div>
+        </div>
     </div>
 </div>
 <!--Photo gallery reel--> 
@@ -268,27 +278,55 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-4">
-                <h2>Ustvarite kakovostne projekte z odličnimi ljudmi</h2>
-                <p>Inovativne rešitve, ki ustrezajo vašim željam in potrebam.</p>
+                <h2>NEAR GROUP</h2>
+                <h1>TOP izbira za inovativne rešitve</h1>
             </div>
             <div class="col-12 col-md-8">
                 <div class="team-carousel-wrapper position-relative" style="overflow:hidden; max-width:900px; margin:auto;">
-                  <button class="team-carousel-btn prev" aria-label="Previous" style="position:absolute;left:0;top:50%;transform:translateY(-50%);z-index:2;">&#8592;</button>
+                  <button class="team-carousel-btn prev" aria-label="Previous" style="position:absolute;left:0;top:50%;transform:translateY(-50%);z-index:2;">
+                    <img src="images/assets/arrow-left.svg" alt="Leva puščica za navigacijo">
+                  </button>
                   <div class="team-carousel-track d-flex" style="transition: transform 0.5s;">
                     <div class="team-carousel-item p-2 flex-shrink-0">
-                      <img class="img-fluid" src="images/placeholders/figma-placeholders/f1.png" alt="Prva oseba in njen opis">
+                        <div class="img-hover-wrapper">
+                            <img class="img-fluid" src="images/rework/about1.webp" alt="Prva oseba in njen opis">
+                            <div class="img-hover-overlay">
+                                <h4>Martin Truden</h4>
+                                <p>Ustanovitelj</p>
+                            </div>
+                        </div>    
                     </div>
                     <div class="team-carousel-item p-2 flex-shrink-0">
-                      <img class="img-fluid" src="images/placeholders/figma-placeholders/f2.png" alt="Druga oseba in njen opis">
+                        <div class="img-hover-wrapper">
+                            <img class="img-fluid" src="images/rework/about2.webp" alt="Druga oseba in njen opis">
+                            <div class="img-hover-overlay">
+                                <h4>Monika Ribič</h4>
+                                <p>Marketing & oglaševanje</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-carousel-item p-2 flex-shrink-0 ">
+                        <div class="img-hover-wrapper">
+                            <img class="img-fluid img-hover-wrapper" src="images/rework/about3.webp" alt="Tretja oseba in njen opis">
+                            <div class="img-hover-overlay">
+                                <h4>Gregor Zalar</h4>
+                                <p>Splet & IT</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="team-carousel-item p-2 flex-shrink-0">
-                      <img class="img-fluid" src="images/placeholders/figma-placeholders/f3.png" alt="Tretja oseba in njen opis">
-                    </div>
-                    <div class="team-carousel-item p-2 flex-shrink-0">
-                      <img class="img-fluid" src="images/placeholders/figma-placeholders/f4.png" alt="Četrta oseba in njen opis">
+                        <div class="img-hover-wrapper">
+                            <img class="img-fluid" src="images/rework/about4.webp" alt="Četrta oseba in njen opis">
+                            <div class="img-hover-overlay">
+                                <h4>Rene Truden</h4>
+                                <p>Digitalizacija & IT</p>
+                            </div>
+                        </div>
                     </div>
                   </div>
-                  <button class="team-carousel-btn next" aria-label="Next" style="position:absolute;right:0;top:50%;transform:translateY(-50%);z-index:2;">&#8594;</button>
+                  <button class="team-carousel-btn next" aria-label="Next" style="position:absolute;right:0;top:50%;transform:translateY(-50%);z-index:2;">
+                        <img src="images/assets/arrow-right.svg" alt="">
+                  </button>
                 </div>
             </div>
         </div>
@@ -300,17 +338,17 @@
     <div class="container">    
         <div class="row">
                 <div class="footer-text">
-                    <p>Podjetje</p>
+                    <h3>Podjetje</h3>
                     <p>Ponujamo različne multimedijske storitve za podjetja in posameznike.</p>
                 </div>
                 <hr class="d-block d-md-none">
                 <div class="footer-text">
-                    <p>Pisarna</p>
+                    <h3>Pisarna</h3>
                     <p>Gasparijeva ulica 14,<br>1380 Cerknica, SI<br><br>
                 </div>
                 <hr class="d-block d-md-none">
                 <div class="footer-text">
-                    <p>Kontakt</p>
+                    <h3>Kontakt</h3>
                     <a href="tel:+38640418640" class="text-decoration-none text-reset">+386 40 418 640</a><br><br>
                     <a href="mailto:info@near.si" class="text-decoration-none text-reset">info@near.si</a></p>
                     <p>Več: <a href="https://www.ajpes.si/" class="text-decoration-none text-reset">AJPES</a></p>
@@ -337,7 +375,7 @@
             <hr>
             <div class="row">
                 <div class="col text-start">
-                    <p>© 2021-2025 Near Group</p>
+                    <p class="poppins-regular">© 2021-2025 Near Group</p>
                 </div class="col">
                 <div class="col text-end">
                     <p></p>

@@ -1,17 +1,32 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    var collapseElements = document.querySelectorAll('#faq-accordion .collapse');
-                collapseElements.forEach(function(collapseEl) {
-                    collapseEl.addEventListener('show.bs.collapse', function () {
-                        var sign = document.querySelector('.collapse-sign[data-target="#' + collapseEl.id + '"]');
-                        if(sign) sign.textContent = '-';
-                    });
-                    collapseEl.addEventListener('hide.bs.collapse', function () {
-                        var sign = document.querySelector('.collapse-sign[data-target="#' + collapseEl.id + '"]');
-                        if(sign) sign.textContent = '+';
-                    });
-                });
-
+    // Dropdown active state management
+    var collapses = document.querySelectorAll('#faq-accordion .collapse');
+    collapses.forEach(function(collapseEl) {
+        // When a dropdown is shown, remove .active from all, then add to the current
+        collapseEl.addEventListener('show.bs.collapse', function () {
+            document.querySelectorAll('.dropdown-title, .dropdown-item').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            var row = collapseEl.previousElementSibling;
+            if (row) {
+                var title = row.querySelector('.dropdown-title, .dropdown-item');
+                if (title) title.classList.add('active');
+            }
+            var sign = document.querySelector('.collapse-sign[data-target="#' + collapseEl.id + '"]');
+            if(sign) sign.textContent = '-';
+        });
+        // When a dropdown is hidden, remove .active from the current
+        collapseEl.addEventListener('hide.bs.collapse', function () {
+            var row = collapseEl.previousElementSibling;
+            if (row) {
+                var title = row.querySelector('.dropdown-title, .dropdown-item');
+                if (title) title.classList.remove('active');
+            }
+            var sign = document.querySelector('.collapse-sign[data-target="#' + collapseEl.id + '"]');
+            if(sign) sign.textContent = '+';
+        });
+    });
     // Carousel autoplay controls
     var carousel = document.querySelector('#landing-carousel');
     var playPauseBtn = document.getElementById('carousel-play-pause');
@@ -109,4 +124,74 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('resize', updateCarousel);
 
   updateCarousel();
+
+  const sections = ['services', 'about', 'portfolio'];
+    const navLinks = sections.map(id => document.querySelector('.nav-text a[href="#' + id + '"]'));
+
+    function onScroll() {
+        let scrollPos = window.scrollY || window.pageYOffset;
+        let found = false;
+        sections.forEach((id, idx) => {
+            const section = document.getElementById(id);
+            if (section) {
+                const offset = section.offsetTop - 80; // adjust for navbar height
+                const nextSection = sections[idx + 1] ? document.getElementById(sections[idx + 1]) : null;
+                const nextOffset = nextSection ? nextSection.offsetTop - 80 : document.body.scrollHeight;
+                if (scrollPos >= offset && scrollPos < nextOffset) {
+                    navLinks.forEach(link => link && link.classList.remove('active-section'));
+                    if (navLinks[idx]) navLinks[idx].classList.add('active-section');
+                    found = true;
+                }
+            }
+        });
+        if (!found) navLinks.forEach(link => link && link.classList.remove('active-section'));
+    }
+
+    window.addEventListener('scroll', onScroll);
+    onScroll(); // run on load
+
+    // Swipe support for team carousel on mobile
+
+    let touchStartX = null;
+    let touchEndX = null;
+
+    function handleSwipe() {
+        if (window.innerWidth > 767) return; // Only on mobile
+        if (touchStartX !== null && touchEndX !== null) {
+            const diff = touchEndX - touchStartX;
+            if (Math.abs(diff) > 50) { // Minimum swipe distance
+                if (diff > 0) {
+                    prevBtn.click();
+                } else {
+                    nextBtn.click();
+                }
+            }
+        }
+        touchStartX = null;
+        touchEndX = null;
+    }
+
+    if (track) {
+        track.addEventListener('touchstart', function(e) {
+            if (e.touches.length === 1) {
+                touchStartX = e.touches[0].clientX;
+            }
+        });
+        track.addEventListener('touchend', function(e) {
+            if (e.changedTouches.length === 1) {
+                touchEndX = e.changedTouches[0].clientX;
+                handleSwipe();
+            }
+        });
+    }
+
+  
 });
+
+function overlayOff(){
+    document.getElementsByClassName("overlay-menu").style.display="none";
+  }
+
+  function overlayOn(){
+    document.getElementsByClassName("overlay-menu").style.display="block"
+  }
