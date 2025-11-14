@@ -7170,6 +7170,13 @@ progress {
 }
 
 /* EKSTRA ZNAČKE ZA RAZMIKE */
+#about {
+  margin-top: 7.5rem;
+  margin-bottom: 7.5rem;
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+}
+
 .nav-text {
   color: #FFFFFF;
 }
